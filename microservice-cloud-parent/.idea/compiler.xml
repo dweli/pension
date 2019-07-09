@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="app-older-oldlife-w" />
+        <module name="app-older-welfare-r" />
+        <module name="microservice-cloud-api" />
+        <module name="microservice-cloud-config-server" />
+        <module name="microservice-cloud-consumer" />
+        <module name="microservice-cloud-consumer-feign" />
+        <module name="microservice-cloud-eureka" />
+        <module name="microservice-cloud-hystrix-dashboard" />
+        <module name="microservice-cloud-provider" />
+        <module name="microservice-cloud-provider-02" />
+        <module name="microservice-cloud-zuul-gateway" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="app-older-oldlife-w" target="1.8" />
+      <module name="app-older-welfare-r" target="1.8" />
+      <module name="microservice-cloud-api" target="1.8" />
+      <module name="microservice-cloud-config-server" target="1.8" />
+      <module name="microservice-cloud-consumer" target="1.8" />
+      <module name="microservice-cloud-consumer-feign" target="1.8" />
+      <module name="microservice-cloud-eureka" target="1.8" />
+      <module name="microservice-cloud-hystrix-dashboard" target="1.8" />
+      <module name="microservice-cloud-parent" target="1.8" />
+      <module name="microservice-cloud-provider" target="1.8" />
+      <module name="microservice-cloud-provider-02" target="1.8" />
+      <module name="microservice-cloud-zuul-gateway" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

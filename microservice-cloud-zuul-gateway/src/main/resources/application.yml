@@ -1,0 +1,29 @@
+server:
+  port: 7001
+
+spring:
+  application:
+    name: microservice-zuul-gateway
+
+eureka:
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    instanceId: ${spring.application.name}:${server.port}
+    preferIpAddress: true
+
+zuul:
+  routes:
+    provider-product:    # 路由名称，名称任意，路由名称唯一
+      path: /elderly-health/** # 访问路径
+      serviceId: elderly-health # 指定服务ID，会自动从Eureka中找到此服务的ip和端口
+      stripPrefix: true # 代理转发时去掉前缀，false:代理转发时不去掉前缀 例如:为true时请求 /product/get/1，代理转发到/get/1
+   
+    # 如果多个服务需要经过路由，则同povider-product方式继续添加，例如：
+    provider-order:
+      path: /benefit-elderly-welfare/**
+      serviceId: benefit-elderly-welfare
+      stripPrefix: true

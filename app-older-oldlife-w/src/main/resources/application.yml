@@ -1,0 +1,31 @@
+server:
+  port: 36041
+
+
+spring:
+  application:
+    name: app-older-oldlife-w
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://39.104.97.83:3306/Pension?serverTimezone=GMT%2B8
+    username: kedi
+    password: kedi123
+    dbcp2:
+      min-idle: 5
+      initial-size: 5
+      max-total: 5
+      max-wait-millis: 150
+
+eureka:
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      #defaultZone: http://192.168.0.105:8761/eureka/
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    instanceId: ${spring.application.name}:${server.port}-hystrix
+    prefer-ip-address: true
+
+
+ 
