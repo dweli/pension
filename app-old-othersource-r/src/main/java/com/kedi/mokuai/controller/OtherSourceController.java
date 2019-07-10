@@ -23,9 +23,9 @@ public class OtherSourceController {
 	 @Autowired
 	    public OtherSourceService service;
 
-	    @RequestMapping("/selectOtherSource")
+	    @RequestMapping("/selectothersource")
 	    @ResponseBody
-	    public List<Map<String, Object>> selectOtherSource() throws Throwable, IOException {
+	    public List<Map<String, Object>> selectothersource() throws Throwable, IOException {
 	    	System.out.println("进入了方法");
 	    	List<Map<String,Object>> users = service.othersource();
 	        return users;
