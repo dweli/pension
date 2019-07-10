@@ -1,6 +1,9 @@
 server:
   port: 31091
 
+mybatis:
+  config-location: classpath:mybatis/mybatis.cfg.xml
+  mapper-locations: classpath:mybatis/mapper/**/*.xml
 
 spring:
   application:

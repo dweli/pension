@@ -29,12 +29,21 @@ public class OpusServiceImpl implements OpusService {
     }
 
     @Override
-    public Integer insertopus(Integer puserid, String name, Integer price, Float weight, Integer uploadUser) {
-        return mapper.insertopus(puserid,name,price,weight,uploadUser);
+    public int insertopus(Map map) {
+        return mapper.insertopus(map);
     }
+
+/*    @Override
+    public int insertopus(Integer puserid, String name, Integer price, Float weight, Integer uploadUser) {
+        int integer = mapper.insertopus(puserid, name, price, weight, uploadUser);
+        return integer;
+    }*/
+
 
     @Override
     public Integer insertopusource(Integer opusid, String address) {
         return mapper.insertopusource(opusid,address);
-    }
+}
+
+
 }

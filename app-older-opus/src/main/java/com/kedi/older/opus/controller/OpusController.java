@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -40,7 +41,14 @@ public class OpusController {
     public ResultVo insertopus(@RequestParam("puserid") Integer puserid,@RequestParam("name") String name,@RequestParam("price") Integer price,
                                @RequestParam("weight") Float weight,@RequestParam("uploadUser") Integer uploadUser,
                                @RequestParam("imgaddress") String address){
-        Integer opusid = service.insertopus(puserid, name, price, weight, uploadUser);
+        HashMap<Object, Object> map = new HashMap<>();
+        map.put("puserid",puserid);
+        map.put("name","name");
+        map.put("price",price);
+        map.put("weight",weight);
+        map.put("uploadUser",uploadUser);
+        map.put("address","address");
+        int opusid= service.insertopus(map);
         service.insertopusource(opusid,address);
         return ResultVOUtil.success();
     }

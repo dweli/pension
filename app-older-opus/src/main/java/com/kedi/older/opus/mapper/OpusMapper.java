@@ -21,12 +21,16 @@ public interface OpusMapper {
     Map<String,Object> findDetail(@Param("id") Integer id );
 
 
+/*
+   @Insert("insert into opus(p_user_id,name,price,weight,uploadUser,status,uploadDate) values(#{p_user_id},${name},#{price},#{weight},#{uploadUser},1,CURTIME())")
+   @Options(useGeneratedKeys = true, keyProperty = "opus_id")
+   int insertopus(@Param("p_user_id") Integer puserid,@Param("name") String name,@Param("price") Integer price,
+                       @Param("weight") Float weight,@Param("uploadUser") Integer uploadUser);*/
 
-    @Insert("insert into opus (p_user_id,name,price,weight,uploadUser,status,uploadDate) values(#{p_user_id},${name},#{price},#{weight},#{uploadUser},1,CURTIME())")
-    @SelectKey(statement = "select last_insert_id()", keyProperty = "opus.id", before = false, resultType = Integer.class)
-    Integer insertopus(@Param("p_user_id") Integer puserid,@Param("name") String name,@Param("price") Integer price,
-                       @Param("weight") Float weight,@Param("uploadUser") Integer uploadUser);
+    int insertopus(Map map);
 
-    @Insert("insert into  opusource(opus_id,address,width,height) values(#{opus_id},${address},0,0)")
+
+
+    @Insert("insert into opusource(opus_id,address,width,height) values(#{opus_id},${address},0,0)")
     Integer insertopusource(@Param("opus_id") Integer opusid,@Param("address") String address);
 }
