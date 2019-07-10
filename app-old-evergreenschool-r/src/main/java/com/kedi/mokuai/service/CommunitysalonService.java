@@ -20,8 +20,8 @@ public class CommunitysalonService {
 	 @Autowired
 	    public CommunitysalonMapper mapper;
 
-	    public List<Map<String,Object>> Communitysalon() {
-	        return mapper.Communitysalon();
+	    public List<Map<String,Object>> communitysalon() {
+	        return mapper.communitysalon();
 	    }
 	    
 }

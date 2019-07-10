@@ -24,11 +24,11 @@ public class CourseRegController {
 	 @Autowired
 	    public CourseRegClassService service;
 
-	    @RequestMapping("/selectCourseReg")
+	    @RequestMapping("/selectcoursereg")
 	    @ResponseBody
-	    public List<Map<String, Object>> selectCourseReg() throws Throwable, IOException {
+	    public List<Map<String, Object>> selectcoursereg() throws Throwable, IOException {
 	    	System.out.println("进入了方法");
-	    	List<Map<String,Object>> users = service.CourseReg();
+	    	List<Map<String,Object>> users = service.coursereg();
 	        return users;
 	    }
 	    

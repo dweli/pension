@@ -20,8 +20,8 @@ public class CourseRegClassService {
 	 @Autowired
 	    public CourseRegMapper mapper;
 
-	    public List<Map<String,Object>> CourseReg() {
-	        return mapper.CourseReg();
+	    public List<Map<String,Object>> coursereg() {
+	        return mapper.coursereg();
 	    }
 
 	    

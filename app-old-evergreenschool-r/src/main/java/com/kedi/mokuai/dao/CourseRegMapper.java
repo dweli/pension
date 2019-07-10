@@ -21,7 +21,7 @@ public interface CourseRegMapper {
 			+ "DATE_FORMAT(endtime, '%Y-%m-%d') as activetime,"
 			+ "note,url "
 			+ "FROM course_reg")
-	List<Map<String, Object>> CourseReg();		
+	List<Map<String, Object>> coursereg();		
 
 	
 	

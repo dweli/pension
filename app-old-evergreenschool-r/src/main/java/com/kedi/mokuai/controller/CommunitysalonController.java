@@ -23,11 +23,11 @@ public class CommunitysalonController {
 	 @Autowired
 	    public CommunitysalonService service;
 
-	    @RequestMapping("/selectCommunitysalon")
+	    @RequestMapping("/selectcommunitysalon")
 	    @ResponseBody
-	    public List<Map<String, Object>> selectCommunitysalon() throws Throwable, IOException {
+	    public List<Map<String, Object>> selectcommunitysalon() throws Throwable, IOException {
 	    	System.out.println("进入了方法");
-	    	List<Map<String,Object>> users = service.Communitysalon();
+	    	List<Map<String,Object>> users = service.communitysalon();
 	        return users;
 	    }
 

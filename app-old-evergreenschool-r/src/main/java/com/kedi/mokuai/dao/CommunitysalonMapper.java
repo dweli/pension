@@ -23,6 +23,6 @@ public interface CommunitysalonMapper {
 			+ "FROM communitysalon c "
 			+ "LEFT JOIN communitesource s "
 			+ "on c.communitysalon_id = s.communitysalon_id")
-	List<Map<String, Object>> Communitysalon();		
+	List<Map<String, Object>> communitysalon();		
 	
 }
