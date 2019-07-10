@@ -25,6 +25,9 @@
         <module>../app-old-homeservice-r</module>
         <module>../elderly-health</module>
         <module>../health-center</module>
+        <module>../app-old-evergreenschool-r</module>
+        <module>../app-old-othersource-r</module>
+        
     </modules>
 
     <packaging>pom</packaging>
