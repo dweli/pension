@@ -20,7 +20,7 @@ public class WelfareServiceImpl implements WelfareService {
     }
 
     @Override
-    public  List<Map<String, Object>> selectAllByWelfareId(Integer id) {
+    public  Map<String, Object> selectAllByWelfareId(Integer id) {
         return mapper.selectAllByWelfare_id(id);
     }
 }
