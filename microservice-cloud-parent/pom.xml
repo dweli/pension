@@ -25,6 +25,8 @@
         <module>../app-old-homeservice-r</module>
         <module>../elderly-health</module>
         <module>../health-center</module>
+        <module>../health-center</module>
+        <module>../benefit-elderly-wealfare</module>
     </modules>
 
     <packaging>pom</packaging>
