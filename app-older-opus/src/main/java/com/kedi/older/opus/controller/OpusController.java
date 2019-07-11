@@ -42,15 +42,22 @@ public class OpusController {
                                @RequestParam("weight") Float weight,@RequestParam("uploadUser") Integer uploadUser,
                                @RequestParam("imgaddress") String address){
         HashMap<Object, Object> map = new HashMap<>();
+        map.put("opus_id",-1);
         map.put("puserid",puserid);
         map.put("name","name");
         map.put("price",price);
         map.put("weight",weight);
         map.put("uploadUser",uploadUser);
         map.put("address","address");
-        int opusid= service.insertopus(map);
-        service.insertopusource(opusid,address);
+        service.insertopus(map);
+        service.insertopusource((int)map.get("opus_id"),address);
         return ResultVOUtil.success();
     }
+
+/*    @RequestMapping("/findAll")
+    public List<Map<String,Object>> findAll(){
+       return service.findAll();
+    }*/
+
 
 }

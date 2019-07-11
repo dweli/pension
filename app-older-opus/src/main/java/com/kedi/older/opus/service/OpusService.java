@@ -20,6 +20,8 @@ public interface OpusService {
 
     int insertopus(Map map);
 
+    List<Map<String,Object>> findAll();
+
     Integer insertopusource(@Param("opus_id") Integer opusid,@Param("address") String address);
 
 

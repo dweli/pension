@@ -29,7 +29,7 @@ public interface OpusMapper {
 
     int insertopus(Map map);
 
-
+    List<Map<String,Object>> findAll();
 
     @Insert("insert into opusource(opus_id,address,width,height) values(#{opus_id},${address},0,0)")
     Integer insertopusource(@Param("opus_id") Integer opusid,@Param("address") String address);
