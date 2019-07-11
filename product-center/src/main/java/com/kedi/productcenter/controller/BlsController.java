@@ -1,6 +1,10 @@
 package com.kedi.productcenter.controller;
 
 import com.kedi.productcenter.service.BlsProductService;
+<<<<<<< Updated upstream
+=======
+import com.kedi.productcenter.vo.ResultVo;
+>>>>>>> Stashed changes
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -65,11 +69,11 @@ public class BlsController {
     * @date        2019/7/11 11:28
     */
     @RequestMapping(value="/opus/createopus", method = RequestMethod.POST)
-    Integer createopus(@RequestParam("puserid") Integer puserid, @RequestParam("name") String name, @RequestParam("price") Integer price,
+    ResultVo createopus(@RequestParam("puserid") Integer puserid, @RequestParam("name") String name, @RequestParam("price") Integer price,
                         @RequestParam("weight") Float weight, @RequestParam("uploadUser") Integer uploadUser,
                         @RequestParam("imgaddress") String address){
-     Integer i=   blsProductService.createopus(puserid,name,price,weight,uploadUser,address);
-     return i;
+        ResultVo resultVo = blsProductService.createopus(puserid, name, price, weight, uploadUser, address);
+            return resultVo;
 
     }
 }

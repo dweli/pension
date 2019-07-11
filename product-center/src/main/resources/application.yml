@@ -16,6 +16,6 @@ eureka:
     preferIpAddress: true
 
 
-feign:
-  httpclient:
-    connection-timeout: 20000
+
+
+ 

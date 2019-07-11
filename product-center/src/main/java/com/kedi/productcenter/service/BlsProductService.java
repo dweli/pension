@@ -1,6 +1,8 @@
 package com.kedi.productcenter.service;
 
 
+import com.kedi.productcenter.config.ServiceFeignConfiguration;
+import com.kedi.productcenter.vo.ResultVo;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -19,7 +21,7 @@ import java.util.Map;
 * @Version:        1.0
 */
 @Service
-@FeignClient(value ="app-older-opus" )
+@FeignClient(value ="app-older-opus",configuration = ServiceFeignConfiguration.class)
 public interface BlsProductService {
 
     /**
@@ -64,7 +66,7 @@ public interface BlsProductService {
     * @date        2019/7/11 10:37
     */
     @RequestMapping(value="/opus/createopus", method = RequestMethod.POST)
-    Integer createopus(@RequestParam("puserid") Integer puserid,@RequestParam("name") String name,@RequestParam("price") Integer price,
-                   @RequestParam("weight") Float weight,@RequestParam("uploadUser") Integer uploadUser,
-                   @RequestParam("imgaddress") String address);
+    ResultVo createopus(@RequestParam("puserid") Integer puserid, @RequestParam("name") String name, @RequestParam("price") Integer price,
+                        @RequestParam("weight") Float weight, @RequestParam("uploadUser") Integer uploadUser,
+                        @RequestParam("imgaddress") String address);
 }
