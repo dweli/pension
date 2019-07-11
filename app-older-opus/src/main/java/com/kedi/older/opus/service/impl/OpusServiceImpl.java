@@ -29,27 +29,27 @@ public class OpusServiceImpl implements OpusService {
         return mapper.findDetail(id);
     }
 
-    @Transactional
+/*    @Transactional
     public int insertopus(Map map) {
         return mapper.insertopus(map);
-    }
-
-    @Override
-    public List<Map<String, Object>> findAll() {
-        return mapper.findAll();
-    }
-
-/*    @Override
-    public int insertopus(Integer puserid, String name, Integer price, Float weight, Integer uploadUser) {
-        int integer = mapper.insertopus(puserid, name, price, weight, uploadUser);
-        return integer;
     }*/
 
+/*    @Override
+    public List<Map<String, Object>> findAll() {
+        return mapper.findAll();
+    }*/
 
-    @Transactional
+   /* @Transactional
     public Integer insertopusource(Integer opusid, String address) {
         return mapper.insertopusource(opusid,address);
 }
+*/
+    @Override
+    public Integer createOpus(Map map) {
+        int insertopus = mapper.insertopus(map);
+        return    mapper.insertopusource(map);
+
+    }
 
 
 }

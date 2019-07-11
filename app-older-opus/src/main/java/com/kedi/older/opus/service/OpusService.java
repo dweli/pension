@@ -14,15 +14,12 @@ public interface OpusService {
 
     Map<String,Object> findDetail(@Param("id") Integer id );
 
+   /* int insertopus(Map map);
 
-    /*int insertopus(@Param("p_user_id") Integer puserid,@Param("name") String name,@Param("price") Integer price,
-                       @Param("weight") Float weight,@Param("uploadUser") Integer uploadUser);*/
 
-    int insertopus(Map map);
 
-    List<Map<String,Object>> findAll();
+    Integer insertopusource(@Param("opus_id") Integer opusid,@Param("address") String address);*/
 
-    Integer insertopusource(@Param("opus_id") Integer opusid,@Param("address") String address);
-
+    Integer createOpus(Map map);
 
 }

@@ -49,8 +49,7 @@ public class OpusController {
         map.put("weight",weight);
         map.put("uploadUser",uploadUser);
         map.put("address",address);
-        service.insertopus(map);
-        service.insertopusource((int)map.get("opus_id"),address);
+        service.createOpus(map);
         return ResultVOUtil.success();
     }
 
