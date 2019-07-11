@@ -44,11 +44,11 @@ public class OpusController {
         HashMap<Object, Object> map = new HashMap<>();
         map.put("opus_id",-1);
         map.put("puserid",puserid);
-        map.put("name","name");
+        map.put("name",name);
         map.put("price",price);
         map.put("weight",weight);
         map.put("uploadUser",uploadUser);
-        map.put("address","address");
+        map.put("address",address);
         service.insertopus(map);
         service.insertopusource((int)map.get("opus_id"),address);
         return ResultVOUtil.success();
