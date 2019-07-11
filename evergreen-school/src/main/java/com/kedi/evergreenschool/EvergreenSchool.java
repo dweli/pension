@@ -1,4 +1,4 @@
-package com.kedi.elderlyheath;
+package com.kedi.evergreenschool;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -15,10 +15,10 @@ import org.springframework.context.annotation.ComponentScan;
 @ComponentScan("com.kedi")
 @EnableEurekaClient
 @SpringBootApplication
-public class elderlyheath 
+public class EvergreenSchool 
 {
     public static void main( String[] args )
     {
-    	SpringApplication.run(elderlyheath.class, args);
+    	SpringApplication.run(EvergreenSchool.class, args);
     }
 }
