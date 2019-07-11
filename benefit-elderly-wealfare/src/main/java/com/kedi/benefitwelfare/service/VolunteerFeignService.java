@@ -18,7 +18,7 @@ import java.util.Map;
  * @Date 2019/7/1  17:02
  * Version 1.0
  **/
-@FeignClient(value = "welfare-center", fallback = ElderlyEmploymenFeignServiceFallBackImpl.class)
+@FeignClient(value = "welfare-center", fallback = VolunteerFeignServiceFallBackImpl.class)
 public interface VolunteerFeignService {
     
     @RequestMapping(value = "/volunteer/list", method = RequestMethod.GET)
