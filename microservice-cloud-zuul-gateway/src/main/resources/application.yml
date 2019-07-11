@@ -24,6 +24,6 @@ zuul:
    
     # 如果多个服务需要经过路由，则同povider-product方式继续添加，例如：
     provider-order:
-      path: /benefit-elderly-welfare/**
-      serviceId: benefit-elderly-welfare
+      path: /benefit-elderly-wealfare/**
+      serviceId: benefit-elderly-wealfare
       stripPrefix: true
