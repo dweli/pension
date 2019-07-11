@@ -23,8 +23,8 @@ public class WelfareController {
     }
 
     @RequestMapping("/listone")
-    public List<Map<String,Object>> findById(@RequestParam("id") Integer id){
-        List<Map<String, Object>> list = welfareService.selectAllByWelfareId(id);
+    public Map<String, Object> findById(@RequestParam("id") Integer id){
+        Map<String, Object> list = welfareService.selectAllByWelfareId(id);
         return list;
     }
 

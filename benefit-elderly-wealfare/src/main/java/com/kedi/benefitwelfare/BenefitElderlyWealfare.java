@@ -15,10 +15,10 @@ import org.springframework.context.annotation.ComponentScan;
 @ComponentScan("com.kedi")
 @EnableEurekaClient
 @SpringBootApplication
-public class elderlyheath 
+public class BenefitElderlyWealfare 
 {
     public static void main( String[] args )
     {
-    	SpringApplication.run(elderlyheath.class, args);
+    	SpringApplication.run(BenefitElderlyWealfare.class, args);
     }
 }

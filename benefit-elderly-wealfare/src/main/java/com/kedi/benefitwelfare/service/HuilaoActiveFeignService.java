@@ -18,12 +18,12 @@ import java.util.Map;
  * @Date 2019/7/1  17:02
  * Version 1.0
  **/
-@FeignClient(value = "welfare-center", fallback = VolunteerFeignServiceFallBackImpl.class)
-public interface VolunteerFeignService {
+@FeignClient(value = "welfare-center", fallback = HuilaoActiveFeignServiceFallBackImpl.class)
+public interface HuilaoActiveFeignService {
     
-    @RequestMapping(value = "/volunteer/list", method = RequestMethod.GET)
-    public List<Map> getJobVolunteerList();
+    @RequestMapping(value = "/huilaoactive/list", method = RequestMethod.GET)
+    public List<Map> getHuilaoActiveList();
     
-    @RequestMapping(value = "/volunteer/detail", method = RequestMethod.GET)
-    public Map getVolunteerDetail(@RequestParam("id") Integer id);
+    @RequestMapping(value = "/huilaoactive/detail", method = RequestMethod.GET)
+    public Map getHuilaoActiveDetail(@RequestParam("id") Integer id);
 }

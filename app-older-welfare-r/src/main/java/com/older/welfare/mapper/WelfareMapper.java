@@ -20,5 +20,5 @@ public interface WelfareMapper {
    List<Map<String, Object>> selectAll();
 
     @Select("SELECT welfare_id,name,price,givetime,uploadtime,older_idcard,older_name,giveusername,giveuseridcard from welfare where welfare_id=#{id}")
-    List<Map<String, Object>> selectAllByWelfare_id(@Param("id") Integer id );
+    Map<String, Object> selectAllByWelfare_id(@Param("id") Integer id );
 }

@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: elderly-health
+    name: benefit-elderly-wealfare
 
 eureka:
   client:
