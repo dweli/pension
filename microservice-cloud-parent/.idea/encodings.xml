@@ -1,17 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/../app-old-oldlife" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../app-older-oldlife-w" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../app-older-welfare-r" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../microservice-cloud-api" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../microservice-cloud-config-server" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../microservice-cloud-consumer" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../microservice-cloud-consumer-feign" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../elderly-health" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../health-center" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../microservice-cloud-eureka" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../microservice-cloud-hystrix-dashboard" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../microservice-cloud-provider" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../microservice-cloud-provider-02" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../microservice-cloud-zuul-gateway" charset="UTF-8" />
   </component>
 </project>

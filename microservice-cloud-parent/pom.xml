@@ -19,6 +19,14 @@
         <module>../app-old-oldlife</module>
         <module>../elderly-health</module>
         <module>../health-center</module>
+        <module>../app-old-evergreenschool-r</module>
+        <module>../app-old-othersource-r</module>
+        <module>../app-old-headline-r</module>
+        <module>../app-old-Goldenradio-r</module>
+        <module>../health-center</module>
+        <module>../benefit-elderly-wealfare</module>
+        <module>../product-center</module>
+        <module>../bilanshan</module>
     </modules>
 
     <packaging>pom</packaging>
