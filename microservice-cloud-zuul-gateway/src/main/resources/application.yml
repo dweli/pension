@@ -27,3 +27,28 @@ zuul:
       path: /benefit-elderly-wealfare/**
       serviceId: benefit-elderly-wealfare
       stripPrefix: true
+    #
+    provider-order:
+      path: /evergreen-school/**
+      serviceId: evergreen-school
+      stripPrefix: true
+    #
+    provider-order:
+      path: /GoldenRadio/**
+      serviceId: GoldenRadio
+      stripPrefix: true
+    #
+    provider-order:
+      path: /head-line/**
+      serviceId: head-line
+      stripPrefix: true
+    #
+    provider-order:
+      path: /home-service/**
+      serviceId: home-service
+      stripPrefix: true
+    #
+    provider-order:
+      path: /other-source/**
+      serviceId: other-source
+      stripPrefix: true

@@ -1,5 +1,5 @@
  server:
-   port: 31014
+   port: 31041
  eureka:
   instance:
     instanceId: ${spring.application.name}:${server.port}
