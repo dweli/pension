@@ -23,7 +23,9 @@
         <module>../app-old-othersource-r</module>
         <module>../app-old-headline-r</module>
         <module>../app-old-Goldenradio-r</module>
-        
+        <module>../health-center</module>
+        <module>../benefit-elderly-wealfare</module>
+
     </modules>
 
     <packaging>pom</packaging>
