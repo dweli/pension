@@ -37,7 +37,6 @@ public class OldhealthController {
 					}
 	            }	          
 	    	}*/
-	    	System.out.println("");
 			return userid; 
 	    }
 }
