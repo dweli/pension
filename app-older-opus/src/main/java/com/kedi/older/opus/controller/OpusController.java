@@ -1,8 +1,6 @@
 package com.kedi.older.opus.controller;
 
 import com.kedi.older.opus.service.OpusService;
-import com.kedi.older.opus.utils.ResultVOUtil;
-import com.kedi.older.opus.vo.ResultVo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -38,19 +36,24 @@ public class OpusController {
     }
 
     @PostMapping("/createopus")
-    public ResultVo insertopus(@RequestParam("puserid") Integer puserid,@RequestParam("name") String name,@RequestParam("price") Integer price,
-                               @RequestParam("weight") Float weight,@RequestParam("uploadUser") Integer uploadUser,
+    public Integer insertopus(@RequestParam("puserid") Integer puserid, @RequestParam("name") String name, @RequestParam("price") Integer price,
+                               @RequestParam("weight") Float weight, @RequestParam("uploadUser") Integer uploadUser,
                                @RequestParam("imgaddress") String address){
         HashMap<Object, Object> map = new HashMap<>();
+        map.put("opus_id",-1);
         map.put("puserid",puserid);
         map.put("name","name");
         map.put("price",price);
         map.put("weight",weight);
         map.put("uploadUser",uploadUser);
         map.put("address","address");
-        int opusid= service.insertopus(map);
-        service.insertopusource(opusid,address);
-        return ResultVOUtil.success();
-    }
+        service.insertopus(map);
+        return service.insertopusource((int)map.get("opus_id"),address);}
+
+/*    @RequestMapping("/findAll")
+    public List<Map<String,Object>> findAll(){
+       return service.findAll();
+    }*/
+
 
 }

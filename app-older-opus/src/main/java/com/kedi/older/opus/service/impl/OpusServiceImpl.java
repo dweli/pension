@@ -28,8 +28,9 @@ public class OpusServiceImpl implements OpusService {
         return mapper.findDetail(id);
     }
 
-    @Override
-    public int insertopus(Map map) {
+
+    @Transactional
+    public Integer insertopus(Map map) {
         return mapper.insertopus(map);
     }
 
@@ -40,7 +41,7 @@ public class OpusServiceImpl implements OpusService {
     }*/
 
 
-    @Override
+    @Transactional
     public Integer insertopusource(Integer opusid, String address) {
         return mapper.insertopusource(opusid,address);
 }

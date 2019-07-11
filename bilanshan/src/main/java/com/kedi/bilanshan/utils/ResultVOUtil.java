@@ -1,6 +1,7 @@
-package com.kedi.older.opus.utils;
+package com.kedi.bilanshan.utils;
 
-import com.kedi.older.opus.vo.ResultVo;
+
+import com.kedi.bilanshan.vo.ResultVo;
 
 public class ResultVOUtil {
     public static ResultVo success(Object object){
@@ -12,6 +13,7 @@ public class ResultVOUtil {
     }
 
     public static ResultVo success(){
+
         return success(null);
     }
 
