@@ -1,4 +1,4 @@
-package com.kedi.healthcenter;
+package com.kedi.othersource;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -15,10 +15,10 @@ import org.springframework.context.annotation.ComponentScan;
 @ComponentScan("com.kedi")
 @EnableEurekaClient
 @SpringBootApplication
-public class healthcenter 
+public class OtherSource 
 {
     public static void main( String[] args )
     {
-    	SpringApplication.run(healthcenter.class, args);
+    	SpringApplication.run(OtherSource.class, args);
     }
 }

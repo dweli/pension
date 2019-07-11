@@ -1,0 +1,17 @@
+server:
+  port: 30027
+
+spring:
+  application:
+    name: other-source
+
+eureka:
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://192.168.23.147:8761/eureka/
+  instance:
+    instanceId: ${spring.application.name}:${server.port}
+    preferIpAddress: true
+
