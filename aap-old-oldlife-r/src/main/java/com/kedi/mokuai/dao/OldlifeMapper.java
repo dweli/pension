@@ -19,7 +19,7 @@ public interface OldlifeMapper {
 	@Select("SELECT bed_id,oldlife_id,bedNumsber,price,minPrice,maxPrice,"
 			+ "`status`,p_user_id,`name`,address,phone,"
 			+ "CONVERT (`Introduction`  USING utf8) AS Introduction,"
-			+ "praise_points,collection_num,url"
+			+ "praise_points,collection_num,url "
 			+ "FROM `bed_oldlife` "
 			+ "order by oldlife_id")
 	List<Map<String, Object>> findByName();		

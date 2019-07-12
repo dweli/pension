@@ -8,5 +8,5 @@ import java.util.Map;
 public interface WelfareService {
 
     List<Map<String, Object>> selectAll();
-    Map<String, Object> selectAllByWelfareId(@Param("id") Integer id );
+    List<Map<String, Object>> selectAllByWelfareId(@Param("id") Integer id );
 }

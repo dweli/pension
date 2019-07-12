@@ -1,7 +1,6 @@
 package com.kedi.welfarecenter.controller;
 
 
-import com.kedi.welfarecenter.service.CivilWelfareService;
 import com.kedi.welfarecenter.service.VolunteersService;
 import com.kedi.welfarecenter.service.WelfareService;
 
@@ -21,18 +20,18 @@ import java.util.Map;
 @RestController
 public class CivilController {
     @Autowired
-    private CivilWelfareService civilWelfareService;
+    private VolunteersService volunteersService;
    
 
-    @RequestMapping(value = "/welfare/list")
-    public List<Map> getCivilWelfareList() {
+    @RequestMapping(value = "/volunteer/list")
+    public List<Map> getJobVolunteerList() {
     	
-        return civilWelfareService.getCivilWelfareList();
+        return volunteersService.getJobVolunteerList();
     }
-    @RequestMapping(value = "/welfare/listone")
-    public Map getCivilWelfareDetail(Integer id) {
+    @RequestMapping(value = "/volunteer/detail")
+    public Map getVolunteerDetail(Integer id) {
     	
-    	return civilWelfareService.getCivilWelfareDetail(id);
+    	return volunteersService.getVolunteerDetail(id);
     }
 
    

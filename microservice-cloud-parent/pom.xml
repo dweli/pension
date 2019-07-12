@@ -8,24 +8,28 @@
     <artifactId>microservice-cloud-parent</artifactId>
     <version>1.0-SNAPSHOT</version>
     <modules>
+        <module>../microservice-cloud-api</module>
+        <module>../microservice-cloud-provider</module>
+        <module>../microservice-cloud-consumer</module>
+        <module>../microservice-cloud-consumer-feign</module>
         <module>../microservice-cloud-eureka</module>
+        <module>../microservice-cloud-provider-02</module>
+        <module>../microservice-cloud-hystrix-dashboard</module>
         <module>../microservice-cloud-zuul-gateway</module>
+        <module>../microservice-cloud-config-server</module>
         <module>../app-older-oldlife-w</module>
-        <module>../app-older-job-r</module>
-        <module>../app-older-opus</module>
-        <module>../app-older-opusappraise</module>
         <module>../app-older-welfare-r</module>
-        <module>../app-older-volunteer-r</module>
         <module>../app-old-oldlife</module>
+        <module>../app-old-oldlife-r</module>
+        <module>../app-old-elderlyfood-r</module>
+        <module>../app-old-homeservice-r</module>
         <module>../elderly-health</module>
         <module>../health-center</module>
         <module>../app-old-evergreenschool-r</module>
         <module>../app-old-othersource-r</module>
         <module>../app-old-headline-r</module>
         <module>../app-old-Goldenradio-r</module>
-        <module>../health-center</module>
-        <module>../benefit-elderly-wealfare</module>
-
+        
     </modules>
 
     <packaging>pom</packaging>
