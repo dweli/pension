@@ -24,6 +24,9 @@
         <module>../product-center</module>
         <module>../bilanshan</module>
         <module>../productcomment-center</module>
+        <module>../app-older-importentnews</module>
+        <module>../news-center</module>
+        <module>../importantnews</module>
     </modules>
 
     <packaging>pom</packaging>
