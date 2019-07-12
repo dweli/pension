@@ -1,5 +1,12 @@
 package com.kedi.productcenter.vo;
 
+/**
+* @Description:    封装的返回类
+* @Author:         ytw
+* @CreateDate:     2019/7/12 10:33
+* @UpdateRemark:   修改内容
+* @Version:        1.0
+*/
 public class ResultVo<T> {
     private Integer code;
     private String msg;

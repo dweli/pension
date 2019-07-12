@@ -20,7 +20,7 @@ import java.util.Map;
 * @UpdateRemark:   修改内容
 * @Version:        1.0
 */
-@Service
+
 @FeignClient(value ="app-older-opus",configuration = ServiceFeignConfiguration.class)
 public interface BlsProductService {
 

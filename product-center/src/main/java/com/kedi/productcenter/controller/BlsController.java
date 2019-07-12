@@ -1,10 +1,7 @@
 package com.kedi.productcenter.controller;
 
 import com.kedi.productcenter.service.BlsProductService;
-<<<<<<< Updated upstream
-=======
 import com.kedi.productcenter.vo.ResultVo;
->>>>>>> Stashed changes
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -14,6 +11,13 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 import java.util.Map;
 
+/**
+* @Description:    商品控制层
+* @Author:         ytw
+* @CreateDate:     2019/7/12 10:32
+* @UpdateRemark:   修改内容
+* @Version:        1.0
+*/
 @RestController
 public class BlsController {
 
@@ -21,7 +25,7 @@ public class BlsController {
     private BlsProductService blsProductService;
 
     /**
-    * 方法实现说明
+    * 方法实现说明 获取所有商品
     * @author      ytw
     *@param
     * @return
@@ -35,7 +39,7 @@ public class BlsController {
     }
 
     /**
-    * 方法实现说明
+    * 方法实现说明  根据状态获取商品列表
     * @author      ytw
     *@param         num
     * @return      list
@@ -48,7 +52,7 @@ public class BlsController {
     }
 
     /**
-    * 方法实现说明
+    * 方法实现说明  获取商品详情
     * @author      ytw
     *@param         id
     * @return
@@ -61,7 +65,7 @@ public class BlsController {
     }
 
     /**
-    * 方法实现说明
+    * 方法实现说明  商品提交
     * @author      ytw
     *@param         puserid,name,price,weight,uploadUser,address
     * @return
@@ -69,11 +73,12 @@ public class BlsController {
     * @date        2019/7/11 11:28
     */
     @RequestMapping(value="/opus/createopus", method = RequestMethod.POST)
-    ResultVo createopus(@RequestParam("puserid") Integer puserid, @RequestParam("name") String name, @RequestParam("price") Integer price,
+    ResultVo createopus(@RequestParam("puserid") Integer puserid, @RequestParam("name") String name,
+                        @RequestParam("price") Integer price,
                         @RequestParam("weight") Float weight, @RequestParam("uploadUser") Integer uploadUser,
                         @RequestParam("imgaddress") String address){
         ResultVo resultVo = blsProductService.createopus(puserid, name, price, weight, uploadUser, address);
-            return resultVo;
+        return resultVo;
 
     }
 }
