@@ -11,6 +11,14 @@ import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
+/**
+* 方法实现说明   点赞和收藏+1
+* @author      ytw
+*@param
+* @return
+* @exception
+* @date        2019/7/12 9:47
+*/
 @RequestMapping("oldfile")
 @RestController
 public class OlderLifeController {
@@ -34,17 +42,30 @@ public class OlderLifeController {
         }
         return users;
         }
-
+        /**
+        * 方法实现说明  点赞+1
+        * @author      ytw
+        *@param
+        * @return
+        * @exception
+        * @date        2019/7/12 9:48
+        */
         @RequestMapping(value="/updatePraise")
         public int increasePraise(@RequestParam("id") Integer id){
             if(id<0) {
                 throw new RuntimeException("传入的类型为负数");
             }
-
-
             return oldLifeService.updatePraise(id);
         }
 
+        /**
+        * 方法实现说明  收藏+1
+        * @author      ytw
+        *@param
+        * @return
+        * @exception
+        * @date        2019/7/12 9:49
+        */
     @RequestMapping("/updateCollection")
     public int increaseCollection(@RequestParam("id") Integer id){
         if(id<0) {
