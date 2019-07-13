@@ -1,0 +1,17 @@
+server:
+  port: 3031
+
+spring:
+  application:
+    name: welfare-center
+
+eureka:
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://172.24.132.96:8761/eureka/
+  instance:
+    instanceId: ${spring.application.name}:${server.port}
+    preferIpAddress: true
+
