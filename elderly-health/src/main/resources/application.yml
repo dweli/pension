@@ -1,5 +1,5 @@
 server:
-  port: 30011
+  port: 30021
 
 spring:
   application:
@@ -10,7 +10,8 @@ eureka:
     registerWithEureka: true
     fetchRegistry: true
     serviceUrl:
-      defaultZone: http://localhost:8761/eureka/
+      defaultZone: http://172.24.132.96:8761/eureka/
+      #defaultZone: http://192.168.23.147:8761/eureka/
   instance:
     instanceId: ${spring.application.name}:${server.port}
     preferIpAddress: true
@@ -24,7 +25,7 @@ hystrix:
         isolation:
           thread:
             timeoutInMilliseconds: 9000
-#ribbon的超时时间
+#ribbon鐨勮秴鏃舵椂闂�
 ribbon:
   ReadTimeout: 3000
   ConnectTimeout: 3000

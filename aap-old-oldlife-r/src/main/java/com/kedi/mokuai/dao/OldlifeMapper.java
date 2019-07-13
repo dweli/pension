@@ -16,7 +16,7 @@ import org.apache.ibatis.annotations.Select;
 @Mapper
 public interface OldlifeMapper {
 		
-	@Select("SELECT bed_id,oldlife_id,bedNumsber,price,minPrice,maxPrice,"
+	@Select("SELECT bed_id,oldlife_id,bedNumsber,price,minPrice,maxPrice,foodclass"
 			+ "`status`,p_user_id,`name`,address,phone,"
 			+ "CONVERT (`Introduction`  USING utf8) AS Introduction,"
 			+ "praise_points,collection_num,url"
