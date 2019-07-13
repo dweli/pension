@@ -6,7 +6,13 @@ import org.apache.ibatis.annotations.Select;
 
 import java.util.List;
 import java.util.Map;
-
+/**
+* @Description:    长者就业sql
+* @Author:         ytw
+* @CreateDate:     2019/7/12 9:44
+* @UpdateRemark:   修改内容
+* @Version:        1.0
+*/
 @Mapper
 public interface JobMapper {
 

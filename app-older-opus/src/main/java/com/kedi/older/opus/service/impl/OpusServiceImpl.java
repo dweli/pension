@@ -4,6 +4,7 @@ import com.kedi.older.opus.mapper.OpusMapper;
 import com.kedi.older.opus.service.OpusService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.Map;
@@ -28,23 +29,13 @@ public class OpusServiceImpl implements OpusService {
         return mapper.findDetail(id);
     }
 
-
     @Transactional
-    public Integer insertopus(Map map) {
-        return mapper.insertopus(map);
+    @Override
+    public Integer createOpus(Map map) {
+        int insertopus = mapper.insertopus(map);
+        return    mapper.insertopusource(map);
+
     }
-
-/*    @Override
-    public int insertopus(Integer puserid, String name, Integer price, Float weight, Integer uploadUser) {
-        int integer = mapper.insertopus(puserid, name, price, weight, uploadUser);
-        return integer;
-    }*/
-
-
-    @Transactional
-    public Integer insertopusource(Integer opusid, String address) {
-        return mapper.insertopusource(opusid,address);
-}
 
 
 }
