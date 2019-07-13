@@ -30,10 +30,18 @@ public class OpusServiceImpl implements OpusService {
     }
 
 
+
     @Transactional
     public Integer insertopus(Map map) {
         return mapper.insertopus(map);
-    }
+
+    @Transactional
+    @Override
+    public Integer createOpus(Map map) {
+        int insertopus = mapper.insertopus(map);
+        return    mapper.insertopusource(map);
+
+
 
 /*    @Override
     public int insertopus(Integer puserid, String name, Integer price, Float weight, Integer uploadUser) {
@@ -46,6 +54,7 @@ public class OpusServiceImpl implements OpusService {
     public Integer insertopusource(Integer opusid, String address) {
         return mapper.insertopusource(opusid,address);
 }
+
 
 
 }

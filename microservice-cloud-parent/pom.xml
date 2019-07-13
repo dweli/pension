@@ -28,8 +28,15 @@
         <module>../app-old-evergreenschool-r</module>
         <module>../app-old-othersource-r</module>
         <module>../app-old-headline-r</module>
-        <module>../app-old-Goldenradio-r</module>
-        
+        <module>../app-old-Goldenradio-r</module> 
+        <module>../health-center</module>
+        <module>../benefit-elderly-wealfare</module>
+        <module>../product-center</module>
+        <module>../bilanshan</module>
+        <module>../productcomment-center</module>
+        <module>../app-older-importentnews</module>
+        <module>../news-center</module>
+        <module>../importantnews</module>
     </modules>
 
     <packaging>pom</packaging>

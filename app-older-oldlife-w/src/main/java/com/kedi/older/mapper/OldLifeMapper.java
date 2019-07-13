@@ -7,7 +7,13 @@ import org.apache.ibatis.annotations.Update;
 
 import java.util.List;
 import java.util.Map;
-
+/**
+* @Description:    点赞和收藏+1  sql语句
+* @Author:         ytw
+* @CreateDate:     2019/7/12 9:49
+* @UpdateRemark:   修改内容
+* @Version:        1.0
+*/
 @Mapper
 public interface OldLifeMapper {
     @Select("SELECT * FROM `bed_oldlife` order by oldlife_id")
