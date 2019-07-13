@@ -4,7 +4,6 @@ package com.kedi.productcenter.service;
 import com.kedi.productcenter.config.ServiceFeignConfiguration;
 import com.kedi.productcenter.vo.ResultVo;
 import org.springframework.cloud.openfeign.FeignClient;
-import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -65,6 +64,7 @@ public interface BlsProductService {
     * @exception
     * @date        2019/7/11 10:37
     */
+
     @RequestMapping(value="/opus/createopus", method = RequestMethod.POST)
     ResultVo createopus(@RequestParam("puserid") Integer puserid, @RequestParam("name") String name, @RequestParam("price") Integer price,
                         @RequestParam("weight") Float weight, @RequestParam("uploadUser") Integer uploadUser,

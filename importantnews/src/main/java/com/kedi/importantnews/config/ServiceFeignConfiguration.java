@@ -1,6 +1,7 @@
 package com.kedi.importantnews.config;
 
 
+import feign.Logger;
 import feign.Request;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
@@ -26,4 +27,8 @@ public class ServiceFeignConfiguration {
         return new Request.Options(connectTimeout, readTimeout);
     }
 
+    @Bean
+    Logger.Level feignLoggerLevel(){
+        return Logger.Level.FULL;
+    }
 }

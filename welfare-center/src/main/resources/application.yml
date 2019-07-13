@@ -16,3 +16,5 @@ eureka:
     instanceId: ${spring.application.name}:${server.port}
     preferIpAddress: true
 
+
+

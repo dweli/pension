@@ -17,3 +17,10 @@ eureka:
     instanceId: ${spring.application.name}:${server.port}
     preferIpAddress: true
 
+feign:
+  hystrix:
+    enabled: true # 开启Feign的熔断功能
+
+logging:
+  level:
+    com.kedi: debug

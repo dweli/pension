@@ -1,7 +1,6 @@
 package com.kedi.older.opus.service;
 
 import org.apache.ibatis.annotations.Param;
-import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.Map;
