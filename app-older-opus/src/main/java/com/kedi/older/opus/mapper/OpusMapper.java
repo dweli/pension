@@ -27,7 +27,7 @@ public interface OpusMapper {
    int insertopus(@Param("p_user_id") Integer puserid,@Param("name") String name,@Param("price") Integer price,
                        @Param("weight") Float weight,@Param("uploadUser") Integer uploadUser);*/
 
-    int insertopus(Map map);
+    Integer insertopus(Map map);
 
     @Insert("insert into opusource(opus_id,address,width,height) values(#{opus_id},${address},0,0)")
     Integer insertopusource(Map map);
