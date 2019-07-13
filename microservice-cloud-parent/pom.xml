@@ -8,6 +8,7 @@
     <artifactId>microservice-cloud-parent</artifactId>
     <version>1.0-SNAPSHOT</version>
     <modules>
+
         <module>../microservice-cloud-eureka</module>
         <module>../microservice-cloud-zuul-gateway</module>
         <module>../app-older-oldlife-w</module>
