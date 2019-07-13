@@ -1,8 +1,14 @@
-package com.kedi.bilanshan.utils;
+package com.kedi.older.opus.utils;
 
+import com.kedi.older.opus.vo.ResultVo;
 
-import com.kedi.bilanshan.vo.ResultVo;
-
+/**
+* @Description:    返回值的封装类
+* @Author:         ytw
+* @CreateDate:     2019/7/12 9:57
+* @UpdateRemark:   修改内容
+* @Version:        1.0
+*/
 public class ResultVOUtil {
     public static ResultVo success(Object object){
         ResultVo<Object> resultVo = new ResultVo<>();
@@ -13,7 +19,6 @@ public class ResultVOUtil {
     }
 
     public static ResultVo success(){
-
         return success(null);
     }
 
