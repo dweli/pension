@@ -49,8 +49,8 @@ zuul:
     provider-order6:
       path: /bilanshan/**
       serviceId: bilanshan
-      stripPrefix: true
+      stripPrefix: false
     provider-order7:
-      path: /importantnews/**
+      path: /news/**
       serviceId: importantnews
-      stripPrefix: true
+      stripPrefix: false

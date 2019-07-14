@@ -27,6 +27,4 @@ public interface ElderlyEmploymenFeignService {
     @RequestMapping(value = "/job/detail", method = RequestMethod.GET)
     public Map getJobDetail(@RequestParam("id") Integer id);
     
-
-
 }
