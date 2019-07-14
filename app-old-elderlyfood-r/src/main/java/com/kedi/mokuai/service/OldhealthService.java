@@ -3,10 +3,13 @@ package com.kedi.mokuai.service;
 import java.util.List;
 import java.util.Map;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.kedi.mokuai.dao.OldhealthMapper;
+
 /**
  * 
  * @author 陈辽逊
@@ -15,19 +18,23 @@ import com.kedi.mokuai.dao.OldhealthMapper;
 @Service
 public class OldhealthService {
 
-	 @Autowired
-	    public OldhealthMapper mapper;
+	private static final Logger logger = LoggerFactory.getLogger(OldhealthService.class);
 
-	  /*  public List<Map<String,Object>> findByName() {
-	        return mapper.findByName();
-	    }
-	    
-	    public List<Map<String,Object>> oldprice(int minprice,int maxprice) {
-	        return mapper.oldprice(minprice,maxprice);
-	    }*/
-	    
-	    public List<Map<String,Object>> olduserid(int olduserid) {
-	        return mapper.olduserid(olduserid);
-	    }
+	@Autowired
+	public OldhealthMapper mapper;
+
+	public List<Map<String, Object>> olduserid(int olduserid) {
+
+		if (isNAN(olduserid)) {
+			logger.info("查询成功");
+		}else {
+			logger.error("查询失败");
+		}
+		return mapper.olduserid(olduserid);
+	}
+
+	private boolean isNAN(int olduserid) {
+		return true;
+	}
 
 }

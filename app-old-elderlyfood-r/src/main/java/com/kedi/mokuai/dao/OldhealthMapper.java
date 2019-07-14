@@ -23,6 +23,7 @@ public interface OldhealthMapper {
 	List<Map<String, Object>> oldprice(@Param("minprice")int minprice,@Param("maxprice")int maxprice);
 	*/
 	
+
 	@Select("SELECT e.elderly_health_id,e.p_user_id,e.lable,f.foodclass, "
 			+ "DATE_FORMAT(e.effectivetime, '%Y-%m-%d') as effectivetime,"
 			+ "DATE_FORMAT(e.expiry, '%Y-%m-%d') as expiry,"
@@ -33,7 +34,7 @@ public interface OldhealthMapper {
 			+ "LEFT JOIN food f "
 			+ "ON h.food_id=f.food_id "
 			+ "LEFT JOIN food_image i "
-			+ "ON h.food_id=i.food_id "
+			+ "ON f.food_id=i.food_id "
 			+ "WHERE p_user_id=(#{olduserid})")
 	List<Map<String, Object>> olduserid(@Param("olduserid")int olduserid);
 }

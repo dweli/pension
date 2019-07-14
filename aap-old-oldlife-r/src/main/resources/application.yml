@@ -10,6 +10,7 @@
     serviceUrl:
       #defaultZone: http://172.24.132.96:8761/eureka/
       defaultZone: http://192.168.23.147:8761/eureka/    
+
       
  spring:
   application:

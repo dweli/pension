@@ -49,8 +49,13 @@ zuul:
     provider-order6:
       path: /bilanshan/**
       serviceId: bilanshan
+<<<<<<< HEAD
       stripPrefix: false
     provider-order7:
       path: /news/**
       serviceId: importantnews
       stripPrefix: false
+=======
+      stripPrefix: true
+
+>>>>>>> refs/heads/master
