@@ -27,7 +27,7 @@ public interface ImportentnewsService {
     * @exception
     * @date        2019/7/12 14:39
     */
-    @RequestMapping(value = "/importentnews/list", method = RequestMethod.GET)
+    @RequestMapping(value = "/news/importentnews/list", method = RequestMethod.GET)
     List<Map<String,Object>> findList();
 
     /**
@@ -38,7 +38,7 @@ public interface ImportentnewsService {
     * @exception
     * @date        2019/7/12 14:40
     */
-    @RequestMapping("/importentnews/listOne")
+    @RequestMapping("/news/importentnews/listOne")
     List<Map<String, Object>> getOneImportentnes(@RequestParam("id") Integer id);
 
 }

@@ -10,18 +10,19 @@ eureka:
     registerWithEureka: true
     fetchRegistry: true
     serviceUrl:
-      defaultZone: http://localhost:8761/eureka/
+    #defaultZone: http://172.24.132.96:8761/eureka/
       #defaultZone: http://192.168.23.147:8761/eureka/
+      defaultZone: http://localhost:8761/eureka/
   instance:
     instanceId: ${spring.application.name}:${server.port}
     preferIpAddress: true
 
 zuul:
   routes:
-    provider-product:    # 璺敱鍚嶇О锛屽悕绉颁换鎰忥紝璺敱鍚嶇О鍞竴
-      path: /elderly-health/** # 璁块棶璺緞
-      serviceId: elderly-health # 鎸囧畾鏈嶅姟ID锛屼細鑷姩浠嶦ureka涓壘鍒版鏈嶅姟鐨刬p鍜岀鍙�
-      stripPrefix: true # 浠ｇ悊杞彂鏃跺幓鎺夊墠缂�锛宖alse:浠ｇ悊杞彂鏃朵笉鍘绘帀鍓嶇紑 渚嬪:涓簍rue鏃惰姹� /product/get/1锛屼唬鐞嗚浆鍙戝埌/get/1
+    provider-product:
+      path: /elderly-health/**
+      serviceId: elderly-health
+      stripPrefix: true
     provider-order:
       path: /benefit-elderly-wealfare/**
       serviceId: benefit-elderly-wealfare
@@ -49,5 +50,8 @@ zuul:
     provider-order6:
       path: /bilanshan/**
       serviceId: bilanshan
-      stripPrefix: true
-
+      stripPrefix: false
+    provider-order7:
+      path: /news/**
+      serviceId: importantnews
+      stripPrefix: false

@@ -31,7 +31,7 @@ public class ImportentnewsController {
     * @exception
     * @date        2019/7/12 13:38
     */
-    @RequestMapping("/importentnews/list")
+    @RequestMapping("/news/importentnews/list")
     public List<Map<String, Object>> findList(){
       return   service.findList();
     }
@@ -44,7 +44,7 @@ public class ImportentnewsController {
     * @exception
     * @date        2019/7/12 13:38
     */
-    @GetMapping("/importentnews/listOne")
+    @GetMapping("/news/importentnews/listOne")
     List<Map<String, Object>> findByUserId(@RequestParam("id") Integer id){
         return  service.findOne(id);
     }

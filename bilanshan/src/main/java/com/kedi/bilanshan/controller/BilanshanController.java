@@ -21,6 +21,7 @@ import java.util.Map;
 * @Version:        1.0
 */
 @RestController
+@RequestMapping("bilanshan")
 public class BilanshanController {
 
     @Autowired
