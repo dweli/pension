@@ -32,7 +32,7 @@ public class VolunteerController {
     public Map getVolunteerDetail(Integer id){
 		
     	return volunteerFeignService.getVolunteerDetail(id);
-    };
+    }
 
    
 }

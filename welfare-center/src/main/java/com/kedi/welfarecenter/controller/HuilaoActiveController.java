@@ -19,20 +19,20 @@ import java.util.Map;
  */
 @RestController
 public class HuilaoActiveController {
-    @Autowired
-    private HuilaoActiveService huilaoActiveController;
-   
+	 @Autowired
+	    private HuilaoActiveService huilaoActiveController;
+	   
 
-    @RequestMapping(value = "/huilaoactive/list")
-    public List<Map> getHuilaoActiveList() {
-    	
-        return huilaoActiveController.getHuilaoActiveList();
-    }
-    @RequestMapping(value = "/huilaoactive/detail")
-    public Map getHuilaoActiveDetail(Integer id) {
-    	
-    	return huilaoActiveController.getHuilaoActiveDetail(id);
-    }
-
+	    @RequestMapping(value = "/huilaoactive/list")
+	    public List<Map> getHuilaoActiveList() {
+	    	
+	        return huilaoActiveController.getHuilaoActiveList();
+	    }
+	    @RequestMapping(value = "/huilaoactive/detail")
+	    public Map getHuilaoActiveDetail(Integer id) {
+	    	
+	    	return huilaoActiveController.getHuilaoActiveDetail(id);
+	    }
+  
    
 }

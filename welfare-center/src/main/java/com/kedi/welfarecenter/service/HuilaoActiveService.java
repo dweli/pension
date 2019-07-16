@@ -18,14 +18,14 @@ import java.util.Map;
  * @Date 2019/7/1  17:02
  * Version 1.0
  **/
-@FeignClient(value = "app-older-huilaoactive-r", fallback = VolunteerServiceFallBackImpl.class)
+@FeignClient(value = "app-older-huilaoactive-r", fallback = HuilaoActiveServiceFallBackImpl.class)
 public interface HuilaoActiveService {
 	
     /**
      * @Description:惠老活动列表获取
      * @return
      */
-    @RequestMapping(value = "/huilaoactive/list ", method = RequestMethod.GET)
+    @RequestMapping(value = "/huilaoactive/list", method = RequestMethod.GET)
     List<Map> getHuilaoActiveList();
     /**
      * @Description:根据id获取惠老活动详情

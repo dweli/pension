@@ -53,6 +53,6 @@ zuul:
     provider-order7:
       path: /news/**
       serviceId: importantnews
-      stripPrefix: true
+      stripPrefix: flase
 
 
