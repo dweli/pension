@@ -19,7 +19,9 @@
    driver-class-name: com.mysql.jdbc.Driver
    username: kedi
    password: kedi123
-   
+  logging:
+    level: com.kedi.mokuai.dao.OldManMapper=DEBUG
+      
 
  
 

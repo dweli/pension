@@ -9,10 +9,11 @@ import org.springframework.stereotype.Service;
 import com.kedi.mokuai.dao.CommunitysalonMapper;
 
 /**
- * @version:		1.0
- * @Description: （对类进行功能描述
- * @author: 		陈辽逊
- * @date: 			2019-7-8 10:55
+ * 
+ *
+ * @ClassName	CommunitysalonService
+ * @author: 	陈辽逊
+ * @date: 		2019/713 10:49
  */
 @Service
 public class CommunitysalonService {
@@ -20,6 +21,9 @@ public class CommunitysalonService {
 	 @Autowired
 	    public CommunitysalonMapper mapper;
 
+	 /**
+	  * @return 返回一个数据对象communitysalon
+	  */
 	    public List<Map<String,Object>> communitysalon() {
 	        return mapper.communitysalon();
 	    }

@@ -4,6 +4,8 @@ package com.kedi.homeservice.service;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+
 import java.util.List;
 import java.util.Map;
 
@@ -26,6 +28,15 @@ public interface BusinessHealthFeignService {
      */
     @RequestMapping(value = "/getbusinesscommodity", method = RequestMethod.GET)
     List<Map> getBusiness();
+    
+    @RequestMapping(value = "/getclassname", method = RequestMethod.GET)
+    List<Map> getclassname(@RequestParam String name);
+    
+    @RequestMapping(value = "/updatebusiness", method = RequestMethod.POST)
+    public int updatebusiness(@RequestParam Map map);
+    
+    @RequestMapping(value = "/insertmerchant", method = RequestMethod.POST)
+    public boolean insertmerchant(@RequestParam Map map);
     
     
 

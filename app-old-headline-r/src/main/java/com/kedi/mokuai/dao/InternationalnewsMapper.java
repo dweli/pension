@@ -7,15 +7,18 @@ import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
 
 /**
- * @version:		1.0
- * @Description: 	获取
- * @author:			陈辽逊
- * @date: 			2019-7-8 10.39
+ * 
+ *
+ * @author: 	陈辽逊
+ * @date: 		2019/7/13 11:19
  */
 @Mapper
 public interface InternationalnewsMapper {
 	
-	//获取国际新闻所有信息
+	/**
+	 * @Description:	获取国际新闻信息所有数据
+	 * @return			返回一个封装的数据对象internationalnews
+	 */
 	@Select("SELECT i.title, " 
 			+"CONVERT (i.content  USING utf8) AS content,\r\n "
 			+"DATE_FORMAT(i.publishtime, '%Y-%m-%d') as publishtime,\r\n "

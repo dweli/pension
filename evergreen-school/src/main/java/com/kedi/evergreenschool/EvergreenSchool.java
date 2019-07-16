@@ -15,10 +15,8 @@ import org.springframework.context.annotation.ComponentScan;
 @ComponentScan("com.kedi")
 @EnableEurekaClient
 @SpringBootApplication
-public class EvergreenSchool 
-{
-    public static void main( String[] args )
-    {
+public class EvergreenSchool {
+    public static void main( String[] args ) {
     	SpringApplication.run(EvergreenSchool.class, args);
     }
 }

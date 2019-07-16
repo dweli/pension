@@ -1,6 +1,5 @@
 package com.kedi.mokuai.controller;
 
-import java.io.IOException;
 import java.util.List;
 import java.util.Map;
 
@@ -13,10 +12,11 @@ import com.kedi.mokuai.service.OldhealthService;
 
 
 /**
- * @version:		1.0
- * @Description: （对类进行功能描述
- * @author: 		陈辽逊 
- * @date: 			2019-7-8 11.17
+ * 
+ *
+ * @ClassName	OldhealthController
+ * @author: 	陈辽逊
+ * @date: 		2019/7/13 10:33
  */
 @Controller
 public class OldhealthController {
@@ -24,19 +24,15 @@ public class OldhealthController {
 	 @Autowired
 	    public OldhealthService service;
 
+	 /**
+	  * @Description:	获取前台提交的参数，指定映射方法名为/selectpuser
+	  * @param 			olduserid
+	  * @return			olduserid数据对象的id
+	  */
 	  @RequestMapping("/selectpuser")
 	    @ResponseBody
-	    public List<Map<String, Object>> selectpuser(int olduserid) throws Throwable, IOException {
+	    public List<Map<String, Object>> selectpuser(int olduserid) {
 	    	List<Map<String,Object>> userid = service.olduserid(olduserid);
-	      /*  for (Map<String, Object> map : userid) {
-	            for (Map.Entry<String, Object> m : map.entrySet()) {
-	            	System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
-	                if ("introduce".equals(m.getKey())) {
-                	byte[] b=(byte[])m.getValue();
-                	m.setValue(new String(b));
-					}
-	            }	          
-	    	}*/
 			return userid; 
 	    }
 }

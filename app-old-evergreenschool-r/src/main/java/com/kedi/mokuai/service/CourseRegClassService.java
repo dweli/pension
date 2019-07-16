@@ -9,17 +9,20 @@ import org.springframework.stereotype.Service;
 import com.kedi.mokuai.dao.CourseRegMapper;
 
 /**
- * @version:		1.0
- * @Description: （对类进行功能描述
- * @author: 		陈辽逊
- * @date: 			2019-7-8 10:55
+ *
+ * @ClassName	CourseRegClassService
+ * @author: 	陈辽逊
+ * @date: 		2019/7/13 10:48
  */
 @Service
 public class CourseRegClassService {
 
 	 @Autowired
 	    public CourseRegMapper mapper;
-
+	 
+	 /**
+	  * @return 返回一个数据对象coursereg
+	  */
 	    public List<Map<String,Object>> coursereg() {
 	        return mapper.coursereg();
 	    }

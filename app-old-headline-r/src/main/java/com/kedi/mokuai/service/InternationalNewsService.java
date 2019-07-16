@@ -10,10 +10,11 @@ import com.kedi.mokuai.dao.InternationalnewsMapper;
 
 
 /**
- * @version:		1.0
- * @Description: （对类进行功能描述
- * @author: 		陈辽逊
- * @date: 			2019-7-8 10:55
+ * 
+ *
+ * @ClassName	InternationalNewsService
+ * @author: 	陈辽逊
+ * @date: 		2019/7/13 11:25
  */
 @Service
 public class InternationalNewsService {
@@ -21,6 +22,9 @@ public class InternationalNewsService {
 	 @Autowired
 	    public InternationalnewsMapper mapper;
 
+	 /**
+	  * @return	返回一个数据对象
+	  */
 	    public List<Map<String,Object>> internationalnews() {
 	        return mapper.internationalnews();
 	    }

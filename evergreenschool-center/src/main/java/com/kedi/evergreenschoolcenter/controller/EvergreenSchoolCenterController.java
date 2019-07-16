@@ -13,7 +13,7 @@ import java.util.Map;
 /**
  * 
 * @Description: 常青学苑控制层
-* @author: dw 
+* @author: clx
 * @date: 2019 2019年7月8日 下午2:00:59
  */
 @RestController
@@ -22,18 +22,26 @@ public class EvergreenSchoolCenterController {
     private EvergreenSchoolCenterService evergreenSchoolCenterService;
    
     /**
-     * @Description:获取在线课堂的所有信息表
-     * @param puserid
+     * @Description:获取在线课堂的所有状态
      * @return
      */
-    @RequestMapping(value = "/getsselectonline")
-    public List<Map> getsselectonline() {
+    @RequestMapping(value = "/getselectcalss")
+    public List<Map> getselectcalss() {
     	
-        return evergreenSchoolCenterService.selectonline();
+    	return evergreenSchoolCenterService.selectcalss();
+    }
+    /**
+     * @Description:获取在线课堂的所有信息表
+     * @param 		calss
+     * @return
+     */
+    @RequestMapping(value = "/getselectonline")
+    public List<Map> getselectonline(int calss) {
+    	
+        return evergreenSchoolCenterService.selectonline(calss);
     }
     /**
      * @Description:获取社区沙龙的所有信息
-     * @param puserid
      * @return
      */
     @RequestMapping(value = "/getselectcommunitysalon")
@@ -43,7 +51,6 @@ public class EvergreenSchoolCenterController {
     }
     /**
      * @Description:获取课程报名的所有信息表
-     * @param puserid
      * @return
      */
     @RequestMapping(value = "/getselectcoursereg")

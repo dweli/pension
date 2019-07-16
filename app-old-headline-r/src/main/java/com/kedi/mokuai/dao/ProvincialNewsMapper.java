@@ -7,14 +7,18 @@ import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
 
 /**
- * @version:		1.0
- * @Description: 	获取
- * @author:			陈辽逊
- * @date: 			2019-7-8 10.39
+ * 
+ *
+ * @author: 	陈辽逊
+ * @date: 		2019/7/13 11:20
  */
 @Mapper
 public interface ProvincialNewsMapper {
 		
+	/**
+	 * @Description:	获取省内信息所有数据
+	 * @return			返回一个封装的数据对象provincialnews
+	 */
 	@Select("SELECT p.title, "  
 			+"CONVERT (p.content  USING utf8) AS content, "  
 			+"DATE_FORMAT(p.publishtime, '%Y-%m-%d') as publishtime, "  

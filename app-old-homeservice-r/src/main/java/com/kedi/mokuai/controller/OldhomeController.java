@@ -1,6 +1,5 @@
 package com.kedi.mokuai.controller;
 
-import java.io.IOException;
 import java.util.List;
 import java.util.Map;
 
@@ -14,38 +13,25 @@ import com.kedi.mokuai.service.OldhomeService;
 
 /**
  * 
- * @author 陈辽逊
  *
+ * @ClassName	OldhomeController
+ * @author: 	陈辽逊
+ * @date: 		2019/7/13 12:07
  */
 @Controller
 public class OldhomeController {
 	
 	 @Autowired
 	    public OldhomeService service;
-
+	 /**
+	  * @Description: 获取前台提交的参数，指定映射方法名为/selectcommodity
+	  * @return		    返回一个数据对象	
+	  */
 	 @RequestMapping("/selectcommodity")
 	    @ResponseBody
-	    public List<Map<String, Object>> selectcommodity() throws Throwable, IOException {
-	    	System.out.println("进入了方法4");
+	    public List<Map<String, Object>> selectcommodity() {
 	    	List<Map<String,Object>> userid = service.commodity();
-	        /*for (Map<String, Object> map : userid) {
-	            for (Map.Entry<String, Object> m : map.entrySet()) {
-	            	System.out.println(m.getKey());
-	            	System.out.println(m.getValue());
-	            	System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
-	                if ("describle".equals(m.getKey())) {
-	             	byte[] b=(byte[])m.getValue();
-	             	m.setValue(new String(b));
-					}
-	            }	          
-	    	}*/
+
 			return userid;	  
 	    }
-	/* @RequestMapping("/selectbusiness")
-	    @ResponseBody
-	 public List<Map<String, Object>> selectbusiness(int puserid) throws Throwable, IOException {
-	    	List<Map<String,Object>> userid = service.business(puserid);	        
-			return userid;	  
-	    }
-	    */
 }

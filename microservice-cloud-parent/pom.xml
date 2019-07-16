@@ -37,6 +37,8 @@
         <module>../app-older-importentnews</module>
         <module>../news-center</module>
         <module>../importantnews</module>
+        <module>../app-old-Goldenradio-r</module>
+        <module>../app-old-mycolectionr-r</module>
     </modules>
 
     <packaging>pom</packaging>

@@ -7,18 +7,21 @@ import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
 
 /**
- * @version:		1.0
- * @Description: 	获取
- * @author:			陈辽逊
- * @date: 			2019-7-8 10.39
+ * 
+ *
+ * @author: 	陈辽逊
+ * @date: 		2019/7/13 10:38
  */
 @Mapper
 public interface CourseRegMapper {
 		
-	//课程报名
+	/**
+	 * @Description:  获取课程报名的所有数据
+	 * @return		   返回一个封装数据对象coursereg
+	 */
 	@Select("SELECT course_reg_id,title,studyplace,"
-			+ "DATE_FORMAT(begintime, '%Y-%m-%d') as activetime,"
-			+ "DATE_FORMAT(endtime, '%Y-%m-%d') as activetime,"
+			+ "DATE_FORMAT(begintime, '%Y-%m-%d') as begintime,"
+			+ "DATE_FORMAT(endtime, '%Y-%m-%d') as endtime,"
 			+ "note,url "
 			+ "FROM course_reg")
 	List<Map<String, Object>> coursereg();		

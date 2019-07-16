@@ -4,7 +4,7 @@ server:
 
 spring:
   application:
-    name: app-older-oldlife-w
+    name: backstage
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
     url: jdbc:mysql://39.104.97.83:3306/Pension?useUnicode=true&characterEncoding=utf8

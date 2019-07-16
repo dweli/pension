@@ -7,21 +7,30 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.kedi.mokuai.dao.OnlineClassMapper;
+
 /**
- * @version:		1.0
- * @Description: （对类进行功能描述
- * @author: 		陈辽逊
- * @date: 			2019-7-8 10:55
+ *
+ * @ClassName	onlineclassService
+ * @author: 	陈辽逊
+ * @date: 		2019/7/13 10:42
  */
 @Service
 public class onlineclassService {
-
+	
+	
 	 @Autowired
 	    public OnlineClassMapper mapper;
-
-	    public List<Map<String,Object>> online() {
-	        return mapper.online();
+	 /**
+	  * @return	返回一个online数据对象
+	  */
+	    public List<Map<String,Object>> online(int calss) {
+	        return mapper.online(calss);
 	    }
-	    
-	    
+	   
+	 /**
+	  * @return 返回一个calss数据对象
+	  */
+	    public List<Map<String,Object>> calss() {
+	        return mapper.calss();
+	    }
 }

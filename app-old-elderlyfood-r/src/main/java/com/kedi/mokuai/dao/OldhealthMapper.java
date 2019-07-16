@@ -9,9 +9,8 @@ import org.apache.ibatis.annotations.Select;
 
 /**
  * 
- * @ClassName UserMapper
- * @Author 陈辽逊
- * @Time 2019年7月3日 上午11:12:43
+ * @Author 		陈辽逊
+ * @Time 		2019年7月13日 10:35
  */
 @Mapper
 public interface OldhealthMapper {

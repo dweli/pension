@@ -14,8 +14,10 @@ import com.kedi.mokuai.dao.ReviewMapper;
 
 /**
  * 
- * @author 陈辽逊
  *
+ * @ClassName	ReviewController
+ * @author: 	陈辽逊
+ * @date: 		2019/713 11:13
  */
 @Controller
 public class ReviewController {
@@ -23,10 +25,13 @@ public class ReviewController {
 	 @Autowired
 	    public ReviewMapper service;
 
+	 /**
+	  * @Description: 获取前台提交的参数，指定映射方法名为/selectreview
+	  * @return		    返回一个数据对象	
+	  */	 
 	 @RequestMapping("/selectreview")
 	    @ResponseBody
 	    public List<Map<String, Object>> selectsreview() throws Throwable, IOException {
-	    	System.out.println("进入了方法4");
 	    	List<Map<String,Object>> userid = service.review();
 			return userid;	  
 	    }

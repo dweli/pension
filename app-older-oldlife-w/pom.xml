@@ -10,7 +10,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>app-older-oldlife-w</artifactId>
+    <artifactId>backstage</artifactId>
 
     <dependencies>
         <dependency>

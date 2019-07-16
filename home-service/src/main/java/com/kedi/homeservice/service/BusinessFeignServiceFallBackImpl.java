@@ -24,4 +24,22 @@ public class BusinessFeignServiceFallBackImpl implements  BusinessHealthFeignSer
 		return null;
 	}
 
+	@Override
+	public List<Map> getclassname(String name) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public int updatebusiness(Map map) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public boolean insertmerchant(Map map) {
+		// TODO Auto-generated method stub
+		return true;
+	}
+
 }

@@ -1,6 +1,5 @@
 package com.kedi.mokuai.controller;
 
-import java.io.IOException;
 import java.util.List;
 import java.util.Map;
 
@@ -22,13 +21,27 @@ public class OnlineClassController {
 	
 	 @Autowired
 	    public onlineclassService service;
-
+	 
+	 /**
+	  * @Description:	获取前台提交的参数，指定映射方法名为/selectcalss
+	  * @return			返回一个数据对象
+	  */
+	    @RequestMapping("/selectcalss")
+	    @ResponseBody
+	    public List<Map<String, Object>> selectcalss() {
+	    	List<Map<String,Object>> users = service.calss();
+	        return users;
+	    }
+	    /**
+	     * @Description: 获取前台提交的参数，指定映射方法名为/selectonline
+	     * @param 		 calss
+	     * @return		 返回一个数据对象
+	     */
 	    @RequestMapping("/selectonline")
 	    @ResponseBody
-	    public List<Map<String, Object>> selectonline() throws Throwable, IOException {
-	    	System.out.println("进入了方法");
-	    	List<Map<String,Object>> users = service.online();
-	        return users;
+	    public List<Map<String, Object>> selectonline(int calss) {
+	    	List<Map<String,Object>> users = service.online(calss);
+	    	return users;
 	    }
 	    
 }

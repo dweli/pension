@@ -8,14 +8,15 @@ import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
 
 /**
- * @version:		1.0
- * @Description: 	获取
- * @author:			陈辽逊
- * @date: 			2019-7-8 10.39
+ * 
+ *
+ * @author: 	陈辽逊
+ * @date: 		2019/7/13 12:32
  */
 @Mapper
 public interface OldlifeMapper {
 		
+
 	@Select("SELECT bed_id,oldlife_id,bedNumsber,price,minPrice,maxPrice,foodclass"
 			+ "`status`,p_user_id,`name`,address,phone,"
 			+ "CONVERT (`Introduction`  USING utf8) AS Introduction,"
@@ -24,6 +25,12 @@ public interface OldlifeMapper {
 			+ "order by oldlife_id")
 	List<Map<String, Object>> findByName();		
 	
+	/**
+	 * @Description:	根据最低价格和最高价格的获取区间信息所有数据
+	 * @param 			minprice
+	 * @param 			maxprice
+	 * @return			根据minprice和maxprice返回一个数据对象
+	 */
 	@Select("SELECT bed_id,oldlife_id,bedNumsber,price,minPrice,maxPrice,"
 			+ "`status`,p_user_id,`name`,address,phone,"
 			+ "CONVERT (`Introduction`  USING utf8) AS Introduction,"

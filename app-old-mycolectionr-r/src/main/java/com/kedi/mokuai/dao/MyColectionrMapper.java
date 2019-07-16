@@ -6,15 +6,21 @@ import java.util.Map;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
+
 /**
  * 
- * @ClassName UserMapper
- * @Author 陈辽逊
- * @Time 2019年7月3日 上午11:12:43
+ *
+ * @author: 	陈辽逊
+ * @date: 		2019/7/13 12:17
  */
 @Mapper
 public interface MyColectionrMapper {
 	
+	/**
+	 * @Description:	根据用户id获取对应我的收藏
+	 * @param 			puserid
+	 * @return			返回一个用户id数据
+	 */
 	@Select("SELECT u.p_user_id, " 
 			+"o.`name` AS opus_name,o.price AS opus_price,o.collectionnum, " 
 			+"oo.address,oo.width AS opusource_width,oo.height AS opusource_height, " 
