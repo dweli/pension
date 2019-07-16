@@ -25,5 +25,9 @@ public interface OtherSourceMapper {
 			+ "FROM other_source  o")
 	List<Map<String, Object>> othersource();		
 	
+	@Select("INSERT INTO `Pension`.`other_source` (`title`,`content`,`url`,`phone`) "+ 
+     " VALUES ('#{title}','#{content}','#{url}','#{phone}')")
+	int insertOthersource(Map map);		
+	
 	
 }

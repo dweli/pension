@@ -19,20 +19,20 @@ import java.util.Map;
  */
 @RestController
 public class VolunteerController {
-    @Autowired
-    private VolunteersService volunteersService;
    
+	    @Autowired
+	    private VolunteersService volunteersService;
+	   
 
-    @RequestMapping(value = "/volunteer/list")
-    public List<Map> getJobVolunteerList() {
-    	
-        return volunteersService.getJobVolunteerList();
-    }
-    @RequestMapping(value = "/volunteer/detail")
-    public Map getVolunteerDetail(Integer id) {
-    	
-    	return volunteersService.getVolunteerDetail(id);
-    }
+	    @RequestMapping(value = "/volunteer/list")
+	    public List<Map> getJobVolunteerList() {
+	    	
+	        return volunteersService.getJobVolunteerList();
+	    }
+	    @RequestMapping(value = "/volunteer/detail")
+	    public Map getVolunteerDetail(Integer id) {
+	    	
+	    	return volunteersService.getVolunteerDetail(id);
+	    }
 
-   
 }

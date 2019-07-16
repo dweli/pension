@@ -27,4 +27,8 @@ public class OtherSourceService {
 	    public List<Map<String,Object>> othersource() {
 	        return mapper.othersource();
 	    }
+	    
+	    public int insertOthersource(Map map) {
+	    	return mapper.insertOthersource(map);
+	    }
 }

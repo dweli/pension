@@ -7,6 +7,7 @@ import java.util.Map;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.kedi.mokuai.service.OtherSourceService;
@@ -20,7 +21,7 @@ import com.kedi.mokuai.service.OtherSourceService;
  * @date: 		2019/7/13 12:41
  */
 @Controller
-public class OtherSourceController {
+public class OtherSourceController{
 	
 	 @Autowired
 	    public OtherSourceService service;
@@ -31,8 +32,22 @@ public class OtherSourceController {
 	  */
 	    @RequestMapping("/selectothersource")
 	    @ResponseBody
-	    public List<Map<String, Object>> selectothersource() {
+
+	    public List<Map<String, Object>> selectothersource() throws Throwable, IOException {
 	    	List<Map<String,Object>> users = service.othersource();
-	        return users;
-	    } 	    
+	        return users;	    
+	    } 
+	    /**
+	     * @Description: 肿瘤基因的发布
+	     * @return
+	     * @throws Throwable
+	     * @throws IOException
+	     */
+	    @RequestMapping("/publish/othersource")
+	    @ResponseBody
+	    public String othersource(@RequestParam Map map)  {
+	    	service.insertOthersource(map);
+	    	return null;
+	    } 
+
 }

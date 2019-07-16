@@ -1,8 +1,8 @@
 package com.kedi.welfarecenter.controller;
 
 
+import com.kedi.welfarecenter.service.CivilWelfareService;
 import com.kedi.welfarecenter.service.VolunteersService;
-import com.kedi.welfarecenter.service.WelfareService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -19,20 +19,18 @@ import java.util.Map;
  */
 @RestController
 public class CivilController {
-    @Autowired
-    private VolunteersService volunteersService;
-   
+	  @Autowired
+	    private CivilWelfareService civilWelfareService;
+	   
 
-    @RequestMapping(value = "/volunteer/list")
-    public List<Map> getJobVolunteerList() {
-    	
-        return volunteersService.getJobVolunteerList();
-    }
-    @RequestMapping(value = "/volunteer/detail")
-    public Map getVolunteerDetail(Integer id) {
-    	
-    	return volunteersService.getVolunteerDetail(id);
-    }
-
-   
+	    @RequestMapping(value = "/civil/list")
+	    public List<Map> getJobVolunteerList() {
+	    	
+	        return civilWelfareService.getCivilWelfareList();
+	    }
+	    @RequestMapping(value = "/civil/detail")
+	    public Map getVolunteerDetail(Integer id) {
+	    	
+	    	return civilWelfareService.getCivilWelfareDetail(id);
+	    }
 }

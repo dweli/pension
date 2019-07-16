@@ -22,9 +22,13 @@ public class EvergreenSchoolController {
     @Autowired
     private EvergreenSchoolFeignService evergreenSchoolFeignService;
 
-    
-    @RequestMapping(value = "/selectcalss/getselectcalss")
-    public List<Map> getselectcalss() {
+
+    /**
+     * @Description:长青学院 在线课堂
+     * @return
+     */
+    @RequestMapping(value = "/selectonline/getsselectonline")
+    public List<Map> getsselectonline() {
     	
     	return evergreenSchoolFeignService.getselectcalss();
     }
@@ -33,6 +37,10 @@ public class EvergreenSchoolController {
     	
         return evergreenSchoolFeignService.getselectonline(calss);
     }
+    /**
+     * @Description:社区沙龙
+     * @return
+     */
     @RequestMapping(value = "/communitysalon/getselectcommunitysalon")
     public List<Map> getselectcommunitysalon() {
     	

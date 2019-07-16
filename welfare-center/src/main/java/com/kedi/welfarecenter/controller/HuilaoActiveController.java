@@ -6,6 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.kedi.welfarecenter.service.HuilaoActiveService;
+
 import java.util.List;
 import java.util.Map;
 
@@ -17,20 +19,20 @@ import java.util.Map;
  */
 @RestController
 public class HuilaoActiveController {
-    @Autowired
-    private HuilaoActiveController huilaoActiveController;
-   
+	 @Autowired
+	    private HuilaoActiveService huilaoActiveController;
+	   
 
-    @RequestMapping(value = "/huilaoactive/list")
-    public List<Map> getHuilaoActiveList() {
-    	
-        return huilaoActiveController.getHuilaoActiveList();
-    }
-    @RequestMapping(value = "/huilaoactive/detail")
-    public Map getHuilaoActiveDetail(Integer id) {
-    	
-    	return huilaoActiveController.getHuilaoActiveDetail(id);
-    }
-
+	    @RequestMapping(value = "/huilaoactive/list")
+	    public List<Map> getHuilaoActiveList() {
+	    	
+	        return huilaoActiveController.getHuilaoActiveList();
+	    }
+	    @RequestMapping(value = "/huilaoactive/detail")
+	    public Map getHuilaoActiveDetail(Integer id) {
+	    	
+	    	return huilaoActiveController.getHuilaoActiveDetail(id);
+	    }
+  
    
 }
