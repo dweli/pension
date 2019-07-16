@@ -18,7 +18,12 @@ import java.util.Map;
 public class EvergreenSchoolCenterServiceFallBackImpl implements  EvergreenSchoolCenterService{
 
 	@Override
-	public List<Map> selectonline() {
+	public List<Map> selectcalss() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	@Override
+	public List<Map> selectonline(int calss) {
 		// TODO Auto-generated method stub
 		return null;
 	}

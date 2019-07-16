@@ -11,11 +11,13 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.kedi.mokuai.service.OtherSourceService;
 
+
 /**
- * @version:		1.0
- * @Description: 	
- * @author: 		陈辽逊
- * @date: 			2019-7-8 10:54
+ * 
+ *
+ * @ClassName	OtherSourceController
+ * @author: 	陈辽逊
+ * @date: 		2019/7/13 12:41
  */
 @Controller
 public class OtherSourceController {
@@ -23,21 +25,14 @@ public class OtherSourceController {
 	 @Autowired
 	    public OtherSourceService service;
 
+	 /**
+	  * @Description:（方法功能描述）
+	  * @return
+	  */
 	    @RequestMapping("/selectothersource")
 	    @ResponseBody
-	    public List<Map<String, Object>> selectothersource() throws Throwable, IOException {
-	    	System.out.println("进入了方法");
+	    public List<Map<String, Object>> selectothersource() {
 	    	List<Map<String,Object>> users = service.othersource();
 	        return users;
-	    } 
-	    
-	    
-	    //post方式
-	    /*@RequestMapping(value="/selectOtherSource",method = RequestMethod.POST,consumes = "application/json")
-	    @ResponseBody
-	    public List<Map<String, Object>> selectOtherSource() throws Throwable, IOException {
-	    	System.out.println("进入了方法");
-	    	List<Map<String,Object>> users = service.othersource();
-	    	return users;
-	    } */
+	    } 	    
 }

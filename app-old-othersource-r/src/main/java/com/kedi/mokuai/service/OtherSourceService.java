@@ -7,18 +7,23 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.kedi.mokuai.dao.OtherSourceMapper;
+
 /**
- * @version:		1.0
- * @Description: （对类进行功能描述
- * @author: 		陈辽逊
- * @date: 			2019-7-8 10:55
+ * 
+ *
+ * @ClassName	OtherSourceService
+ * @author: 	陈辽逊
+ * @date: 		2019/7/13 12:40
  */
 @Service
 public class OtherSourceService {
 
 	 @Autowired
 	    public OtherSourceMapper mapper;
-
+	 
+	 /**
+	  * @return	返回一个数据对象
+	  */
 	    public List<Map<String,Object>> othersource() {
 	        return mapper.othersource();
 	    }

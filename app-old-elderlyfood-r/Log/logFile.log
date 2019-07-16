@@ -2013,3 +2013,48 @@ com.netflix.discovery.shared.transport.TransportException: Cannot execute reques
 2019-07-11 10:42:23 [localhost-startStop-2] INFO  o.a.c.c.C.[.[localhost].[/] - Destroying Spring FrameworkServlet 'dispatcherServlet'
 2019-07-11 10:42:23 [RMI TCP Connection(2)-127.0.0.1] INFO  o.a.c.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-31012"]
 2019-07-11 10:42:23 [RMI TCP Connection(2)-127.0.0.1] INFO  o.a.c.http11.Http11NioProtocol - Destroying ProtocolHandler ["http-nio-31012"]
+2019-07-15 11:07:01 [main] INFO  o.s.c.a.AnnotationConfigApplicationContext - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@6b2ea799: startup date [Mon Jul 15 11:07:01 CST 2019]; root of context hierarchy
+2019-07-15 11:07:01 [main] INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2019-07-15 11:07:01 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'configurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$9a307f70] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-15 11:07:01 [main] INFO  c.k.mokuai.OldhealthApplication - No active profile set, falling back to default profiles: default
+2019-07-15 11:07:01 [main] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@6d167f58: startup date [Mon Jul 15 11:07:01 CST 2019]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@6b2ea799
+2019-07-15 11:07:01 [main] INFO  o.s.b.f.s.DefaultListableBeanFactory - Overriding bean definition for bean 'dataSource' with a different definition: replacing [Root bean: class [null]; scope=refresh; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=false; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Hikari; factoryMethodName=dataSource; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]] with [Root bean: class [org.springframework.aop.scope.ScopedProxyFactoryBean]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in BeanDefinition defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]]
+2019-07-15 11:07:01 [main] INFO  o.s.c.context.scope.GenericScope - BeanFactory id=a59e8094-448c-3f07-b981-3c6f8ab0a7b8
+2019-07-15 11:07:01 [main] INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2019-07-15 11:07:02 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$7e167c73] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-15 11:07:02 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$9a307f70] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-15 11:07:02 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 31012 (http)
+2019-07-15 11:07:02 [main] INFO  o.a.c.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-31012"]
+2019-07-15 11:07:02 [main] INFO  o.a.c.core.StandardService - Starting service [Tomcat]
+2019-07-15 11:07:02 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.35
+2019-07-15 11:07:02 [localhost-startStop-1] INFO  o.a.c.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [E:\java\jre1.8.0_202\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;E:/java/jre1.8.0_202/bin/server;E:/java/jre1.8.0_202/bin;E:/java/jre1.8.0_202/lib/amd64;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;E:\java\jdk1.8.0_202\bin\;E:\apache-maven-3.3.9\bin\;E:\java\jdk1.8.0_202\jre\bin;C:\Users\74099\AppData\Local\Microsoft\WindowsApps;;E:\eclipse;;.]
+2019-07-15 11:07:02 [localhost-startStop-1] INFO  o.a.c.c.C.[.[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-07-15 11:07:02 [localhost-startStop-1] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 863 ms
+2019-07-15 11:07:02 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
+2019-07-15 11:07:02 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-07-15 11:07:02 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-07-15 11:07:02 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2019-07-15 11:07:02 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+2019-07-15 11:07:02 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'oldhealthController': Unsatisfied dependency expressed through field 'service'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.kedi.mokuai.service.OldhealthService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2019-07-15 11:07:02 [main] INFO  o.a.c.core.StandardService - Stopping service [Tomcat]
+2019-07-15 11:07:02 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-07-15 11:07:02 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field service in com.kedi.mokuai.controller.OldhealthController required a bean of type 'com.kedi.mokuai.service.OldhealthService' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.kedi.mokuai.service.OldhealthService' in your configuration.
+

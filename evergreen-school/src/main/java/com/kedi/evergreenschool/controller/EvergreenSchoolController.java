@@ -13,7 +13,7 @@ import java.util.Map;
 /**
  * @ClassName 常青学苑业务层接口
  * @Description
- * @Author dw
+ * @Author clx
  * @Date 2019/7/1  17:01
  * Version 1.0
  **/
@@ -23,10 +23,15 @@ public class EvergreenSchoolController {
     private EvergreenSchoolFeignService evergreenSchoolFeignService;
 
     
-    @RequestMapping(value = "/selectonline/getsselectonline")
-    public List<Map> getsselectonline() {
+    @RequestMapping(value = "/selectcalss/getselectcalss")
+    public List<Map> getselectcalss() {
     	
-        return evergreenSchoolFeignService.getsselectonline();
+    	return evergreenSchoolFeignService.getselectcalss();
+    }
+    @RequestMapping(value = "/selectonline/getselectonline")
+    public List<Map> getselectonline(int calss) {
+    	
+        return evergreenSchoolFeignService.getselectonline(calss);
     }
     @RequestMapping(value = "/communitysalon/getselectcommunitysalon")
     public List<Map> getselectcommunitysalon() {

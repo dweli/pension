@@ -2,8 +2,6 @@ package com.kedi.evergreenschool.service;
 
 
 import org.springframework.cloud.openfeign.FeignClient;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -21,6 +19,15 @@ import java.util.Map;
 @FeignClient(value = "evergreenschool-center", fallback = EvergreenSchoolServiceFallBackImpl.class)
 public interface EvergreenSchoolFeignService {
 
+	/**
+	 * 
+	 * @Description  获取在线课堂的所有状态
+	 * @Author clx
+	 * @Date 2019/7/1  17:02
+	 * Version 1.0
+	 */
+	@RequestMapping(value = "/getselectcalss", method = RequestMethod.GET)
+	List<Map> getselectcalss();
     /**
      * 
      * @Description  获取在线课堂的所有信息表
@@ -28,8 +35,8 @@ public interface EvergreenSchoolFeignService {
      * @Date 2019/7/1  17:02
      * Version 1.0
      */
-    @RequestMapping(value = "/getsselectonline", method = RequestMethod.GET)
-    List<Map> getsselectonline();
+    @RequestMapping(value = "/getselectonline", method = RequestMethod.GET)
+    List<Map> getselectonline(@RequestParam("calss")int calss);
     /**
      * 
      * @Description  获取社区沙龙的所有信息

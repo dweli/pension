@@ -8,9 +8,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 /**
  * 
-* @Description: 
-* @author: dw 
-* @date: 2019 2019年7月4日 下午4:30:21
+* @author: 	 dw 
+* @date:	 2019/7/13 12:29
  */
 @FeignClient(value = "app-older-oldlife-w", fallback = ConsumerClientServiceFallBackImpl.class)
 public interface OldlifeWriteService {
@@ -18,9 +17,8 @@ public interface OldlifeWriteService {
 	/**
      * 
      * @Description  添加养老院的点赞数
-     * @Author dw
-     * @Date 2019/7/1  17:02
-      * Version 1.0
+     * @Author 		 dw
+     * @Date 		 2019/7/13 12:29
      */
     @RequestMapping(value = "/oldfile/updatePraise?id={id}", method = RequestMethod.GET)
     int addPraiseNum(@RequestParam("id") int id);

@@ -7,15 +7,18 @@ import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
 
 /**
- * @version:		1.0
- * @Description: 	获取
- * @author:			陈辽逊
- * @date: 			2019-7-8 10.39
+ * 
+ *
+ * @author: 	陈辽逊
+ * @date: 		2019/7/13 11:18
  */
 @Mapper
 public interface HomenewsMapper {
-		
-	//获取国内新闻所有信息
+	
+	/**
+	 * 	@Description:	获取国内新闻所有信息
+	 * @return			返回一个封装的数据对象homenews
+	 */
 	@Select("SELECT h.title,"
 			+ "CONVERT (h.content  USING utf8) AS content,"
 			+ "DATE_FORMAT(h.publishtime, '%Y-%m-%d') as publishtime,"

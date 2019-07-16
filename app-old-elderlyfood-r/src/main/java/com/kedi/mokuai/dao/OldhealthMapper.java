@@ -9,20 +9,17 @@ import org.apache.ibatis.annotations.Select;
 
 /**
  * 
- * @ClassName UserMapper
- * @Author 陈辽逊
- * @Time 2019年7月3日 上午11:12:43
+ * @Author 		陈辽逊
+ * @Time 		2019年7月13日 10:35
  */
 @Mapper
 public interface OldhealthMapper {
 
-	/*@Select("SELECT * FROM `bed_oldlife` order by oldlife_id")
-    List<Map<String, Object>> findByName();	
-	
-	@Select("SELECT * FROM `bed_oldlife` where price>(#{minprice}) and price<(#{maxprice})")
-	List<Map<String, Object>> oldprice(@Param("minprice")int minprice,@Param("maxprice")int maxprice);
-	*/
-	
+	/**
+	 * @Description: 根据用户id获取对应健康标签与对应食物的关系表
+	 * @param 		 olduserid
+	 * @return		  返回一个用户id
+	 */
 	@Select("SELECT e.p_user_id,e.lable,"
 			+ "DATE_FORMAT(e.effectivetime, '%Y-%m-%d') as effectivetime,"
 			+ "DATE_FORMAT(e.expiry, '%Y-%m-%d') as expiry,"

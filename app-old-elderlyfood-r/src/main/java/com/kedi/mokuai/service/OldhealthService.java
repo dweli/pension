@@ -6,16 +6,14 @@ import java.util.Map;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-
 import com.kedi.mokuai.dao.OldhealthMapper;
 
 /**
  * 
- * @author 陈辽逊
- *
+ * @ClassName		OldhealthService
+ * @author: 		陈辽逊
+ * @date: 			2019/7/13 10:12
  */
-@Service
 public class OldhealthService {
 
 	private static final Logger logger = LoggerFactory.getLogger(OldhealthService.class);
@@ -23,6 +21,9 @@ public class OldhealthService {
 	@Autowired
 	public OldhealthMapper mapper;
 
+	/**
+	 * @return			返回一个olduserid数据对象的id值
+	 */
 	public List<Map<String, Object>> olduserid(int olduserid) {
 
 		if (isNAN(olduserid)) {

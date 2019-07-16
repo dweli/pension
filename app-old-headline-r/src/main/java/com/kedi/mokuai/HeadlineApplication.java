@@ -8,8 +8,10 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 
 /**
  * 
- * @author 陈辽逊
  *
+ * @ClassName	HeadlineApplication
+ * @author: 	陈辽逊
+ * @date: 		2019/7/13 11:16
  */
 @EnableEurekaClient
 @SpringBootApplication

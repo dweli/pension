@@ -1,6 +1,5 @@
 package com.kedi.mokuai.controller;
 
-import java.io.IOException;
 import java.util.List;
 import java.util.Map;
 
@@ -23,10 +22,13 @@ public class InternationalNewsController {
 	 @Autowired
 	    public InternationalNewsService service;
 
+	 /**
+	  * @Description: 获取前台提交的参数，指定映射方法名为/selectinternationalnews
+	  * @return		    返回一个数据对象	
+	  */
 	    @RequestMapping("/selectinternationalnews")
 	    @ResponseBody
-	    public List<Map<String, Object>> selectinternationalnews() throws Throwable, IOException {
-	    	System.out.println("进入了方法");
+	    public List<Map<String, Object>> selectinternationalnews() {
 	    	List<Map<String,Object>> users = service.internationalnews();
 	        return users;
 	    }	    

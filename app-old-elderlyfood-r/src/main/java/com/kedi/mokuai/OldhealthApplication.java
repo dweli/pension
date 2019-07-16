@@ -8,8 +8,10 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 
 /**
  * 
- * @author 陈辽逊
  *
+ * @ClassName	OldhealthApplication
+ * @author:		陈辽逊
+ * @date: 		2019/7/13 10:33
  */
 @EnableEurekaClient
 @SpringBootApplication
