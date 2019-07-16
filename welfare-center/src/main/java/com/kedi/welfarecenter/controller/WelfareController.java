@@ -18,20 +18,21 @@ import java.util.Map;
  */
 @RestController
 public class WelfareController {
-    @Autowired
-    private WelfareService elderlyHealthService;
-   
+  
+	 @Autowired
+	    private WelfareService elderlyHealthService;
+	   
 
-    @RequestMapping(value = "/job/list")
-    public List<Map> getJobList() {
-    	
-        return elderlyHealthService.getJobList();
-    }
-    @RequestMapping(value = "/job/detail")
-    public Map getJobDetail(Integer id) {
-    	
-    	return elderlyHealthService.getJobDetail(id);
-    }
+	    @RequestMapping(value = "/job/list")
+	    public List<Map> getJobList() {
+	    	
+	        return elderlyHealthService.getJobList();
+	    }
+	    @RequestMapping(value = "/job/detail")
+	    public Map getJobDetail(Integer id) {
+	    	
+	    	return elderlyHealthService.getJobDetail(id);
+	    }
 
    
 }

@@ -22,12 +22,19 @@ public class EvergreenSchoolController {
     @Autowired
     private EvergreenSchoolFeignService evergreenSchoolFeignService;
 
-    
+    /**
+     * @Description:长青学院 在线课堂
+     * @return
+     */
     @RequestMapping(value = "/selectonline/getsselectonline")
     public List<Map> getsselectonline() {
     	
         return evergreenSchoolFeignService.getsselectonline();
     }
+    /**
+     * @Description:社区沙龙
+     * @return
+     */
     @RequestMapping(value = "/communitysalon/getselectcommunitysalon")
     public List<Map> getselectcommunitysalon() {
     	
