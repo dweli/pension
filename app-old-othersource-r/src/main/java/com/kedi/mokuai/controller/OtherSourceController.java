@@ -37,17 +37,6 @@ public class OtherSourceController{
 	    	List<Map<String,Object>> users = service.othersource();
 	        return users;	    
 	    } 
-	    /**
-	     * @Description: 肿瘤基因的发布
-	     * @return
-	     * @throws Throwable
-	     * @throws IOException
-	     */
-	    @RequestMapping("/publish/othersource")
-	    @ResponseBody
-	    public String othersource(@RequestParam Map map)  {
-	    	service.insertOthersource(map);
-	    	return null;
-	    } 
+	   
 
 }

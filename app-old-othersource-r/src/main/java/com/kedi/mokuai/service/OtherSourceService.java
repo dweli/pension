@@ -28,7 +28,5 @@ public class OtherSourceService {
 	        return mapper.othersource();
 	    }
 	    
-	    public int insertOthersource(Map map) {
-	    	return mapper.insertOthersource(map);
-	    }
+	 
 }
