@@ -15,7 +15,9 @@ spring:
       initial-size: 5
       max-total: 5
       max-wait-millis: 150
-
+logging:
+    level: 
+        com.kedi.older.mapper : DEBUG
 eureka:
   client:
     registerWithEureka: true

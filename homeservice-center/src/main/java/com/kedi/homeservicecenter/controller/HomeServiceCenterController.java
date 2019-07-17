@@ -4,7 +4,6 @@ package com.kedi.homeservicecenter.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.kedi.homeservicecenter.service.HomeServiceCenterFeignService;
@@ -30,21 +29,4 @@ public class HomeServiceCenterController {
         return homeServiceCenterFeignService.selectBusinessCommodity();
     }
     
-    @RequestMapping(value = "/getclassname",method = RequestMethod.GET)
-    public List<Map> getclassname(@RequestParam String name) {
-    	
-    	return homeServiceCenterFeignService.selectclassname(name);
-    }
-    
-    @RequestMapping(value = "/updatebusiness",method = RequestMethod.POST)
-    public int updatebusiness(@RequestParam Map map) {
-    	
-    	return homeServiceCenterFeignService.updatebusiness(map);
-    }
-
-    @RequestMapping(value = "/insertmerchant",method = RequestMethod.POST)
-    public boolean insertmerchant(@RequestParam Map map) {
-    	
-    	return homeServiceCenterFeignService.insertmerchant(map);
-    }
 }

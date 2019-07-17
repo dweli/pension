@@ -13,12 +13,24 @@ import java.util.Map;
  * Version 1.0
  **/
 @Component
-public class HomeServiceCenterServiceFallBackImpl implements  HomeServiceCenterFeignService{
+public class MerchantCenterServiceFallBackImpl implements  MerchantCenterFeignService{
+
 
 	@Override
-	public List<Map> selectBusinessCommodity() {
+	public List<Map> selectclassname(String name) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
+	@Override
+	public int updatebusiness(Map map) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public boolean insertmerchant(Map map) {
+		// TODO Auto-generated method stub
+		return true;
+	}
 }
