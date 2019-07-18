@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Map;
 
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
 
 /**
@@ -26,4 +27,11 @@ public interface OldhomeMapper {
 			+ "LEFT JOIN commodity c "
 			+ "ON b.business_id=c.business_id")
 	List<Map<String, Object>> commodity();
+	
+	/**
+	 * @Description:	根据商品id 返回详情
+	 * @return			
+	 */
+	@Select("SELECT * FROM `Pension`.`commodity` t LEFT JOIN `Pension`.`goodsimage` w ON t.`commodity_id` = w.`commodity_id` LEFT JOIN `Pension`.`business` b ON t.`business_id` = b.`business_id` WHERE t.`commodity_id` =#{id}")
+	Map<String, Object> getCommodityDetailbyid(@Param("id") int id);
 }

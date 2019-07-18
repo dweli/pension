@@ -30,15 +30,16 @@ public interface BusinessHealthFeignService {
     List<Map> getBusiness();
     
     @RequestMapping(value = "/getclassname", method = RequestMethod.GET)
-    List<Map> getclassname(@RequestParam String name);
+    List<Map> getclassname(@RequestParam("name") String name);
     
     @RequestMapping(value = "/updatebusiness", method = RequestMethod.POST)
-    public int updatebusiness(@RequestParam Map map);
+    public int updatebusiness(@RequestParam("map") Map map);
     
     @RequestMapping(value = "/insertmerchant", method = RequestMethod.POST)
-    public boolean insertmerchant(@RequestParam Map map);
+    public boolean insertmerchant(@RequestParam("map") Map map);
     
-    
+    @RequestMapping(value = "/commoditydetailbyid", method = RequestMethod.GET)
+    Map<String,Object> getCommodityDetailbyid(@RequestParam("id")Integer id);
 
 
 }

@@ -29,9 +29,6 @@ eureka:
     instanceId: ${spring.application.name}:${server.port}-hystrix
     prefer-ip-address: true
 
-logging:
-  level:
-     com.kedi.older.mapper : debug
 
 
  
