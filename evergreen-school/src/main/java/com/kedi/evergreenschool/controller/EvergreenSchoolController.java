@@ -32,6 +32,7 @@ public class EvergreenSchoolController {
     	
     	return evergreenSchoolFeignService.getselectcalss();
     }
+    
     @RequestMapping(value = "/selectonline/getselectonline")
     public List<Map> getselectonline(int calss) {
     	
