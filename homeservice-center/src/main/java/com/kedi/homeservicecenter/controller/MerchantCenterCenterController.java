@@ -7,7 +7,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.kedi.homeservicecenter.service.HomeServiceCenterFeignService;
 import com.kedi.homeservicecenter.service.MerchantCenterFeignService;
 
 import java.util.List;
@@ -21,12 +20,12 @@ import java.util.Map;
  */
 @RestController
 public class MerchantCenterCenterController {
-    @Autowired
+   @Autowired
     private MerchantCenterFeignService merchantCenterFeignService;
    
 
     
-    @RequestMapping(value = "/getclassname",method = RequestMethod.GET)
+   /*  @RequestMapping(value = "/getclassname",method = RequestMethod.GET)
     public List<Map> getclassname(@RequestParam String name) {
     	
     	return merchantCenterFeignService.selectclassname(name);
@@ -42,5 +41,5 @@ public class MerchantCenterCenterController {
     public boolean insertmerchant(@RequestParam Map map) {
     	
     	return merchantCenterFeignService.insertmerchant(map);
-    }
+    }*/
 }

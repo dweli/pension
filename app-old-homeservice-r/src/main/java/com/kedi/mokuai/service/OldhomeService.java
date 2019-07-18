@@ -27,4 +27,10 @@ public class OldhomeService {
 	 public List<Map<String,Object>>commodity() {
 	    	return mapper.commodity();
 	    }	    
+	 /**
+	  * @return	返回一个商品
+	  */
+	 public Map<String,Object> getCommodityDetailbyid(int id) {
+		 return mapper.getCommodityDetailbyid(id);
+	 }	    
 }

@@ -21,4 +21,10 @@ public class HomeServiceCenterServiceFallBackImpl implements  HomeServiceCenterF
 		return null;
 	}
 
+	@Override
+	public Map<String, Object> getCommodityDetailbyid(Integer id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }

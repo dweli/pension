@@ -34,4 +34,11 @@ public class OldhomeController {
 
 			return userid;	  
 	    }
+	 
+	 
+	 @RequestMapping("/commoditydetailbyid")
+	 @ResponseBody
+	 public Map<String,Object> getCommodityDetailbyid(int id){
+		 return service.getCommodityDetailbyid(id);
+	 }
 }
