@@ -42,10 +42,4 @@ public class BusinessFeignServiceFallBackImpl implements  BusinessHealthFeignSer
 		return true;
 	}
 
-	@Override
-	public Map<String, Object> getCommodityDetailbyid(Integer id) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
 }

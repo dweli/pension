@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.kedi.older.servie.VolunteerService;
+import com.kedi.older.servie.PcVolunteerService;
 
 
 
@@ -18,15 +18,15 @@ import com.kedi.older.servie.VolunteerService;
 /**
  * 
  *
- * @ClassName	VolunteerController
+ * @ClassName	PcVolunteerController
  * @author: 	陈辽逊
  * @date: 		2019/7/13 12:07
  */
 @Controller
-public class VolunteerController {
+public class PcVolunteerController {
 	
 	 @Autowired
-	    public VolunteerService service;
+	    public PcVolunteerService service;
 	 /**
 	  * @Description: 获取前台提交的参数，指定映射方法名为/selectvolunteerpart
 	  * @return		    返回一个数据对象	
@@ -56,22 +56,22 @@ public class VolunteerController {
 		 return userid;	  
 	 }
 	 
-	 @RequestMapping(value = "/ivolunteer",method=RequestMethod.POST)
+	 @RequestMapping(value = "/insertivolunteer",method=RequestMethod.POST)
 	 @ResponseBody
-	 public int ivolunteer(@RequestParam Map map) {
+	 public int insertivolunteer(@RequestParam Map map) {
 		 int userid = service.ivolunteer(map);
 		 return userid;	    
 	 }
-	 @RequestMapping(value = "/iVolunteerPictures",method=RequestMethod.POST)
+	 @RequestMapping(value = "/insertivolunteerpictures",method=RequestMethod.POST)
 	 @ResponseBody
-	 public boolean iVolunteerPictures(@RequestParam Map map) {
-		 boolean userid = service.iVolunteerPictures(map);
+	 public boolean insertiVolunteerPictures(@RequestParam Map map) {
+		 boolean userid = service.ivolunteerpictures(map);
 		 return userid;	    
 	 }
-	 @RequestMapping(value = "/VolunteerPictures",method=RequestMethod.POST)
+	 @RequestMapping(value = "/updatevolunteerpictures",method=RequestMethod.POST)
 	 @ResponseBody
-	 public boolean VolunteerPictures(@RequestParam Map map) {
-		 boolean userid = service.VolunteerPictures(map);
+	 public boolean updatevolunteerpictures(@RequestParam Map map) {
+		 boolean userid = service.volunteerpictures(map);
 		 return userid;	    
 	 }
 }

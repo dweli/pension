@@ -47,12 +47,6 @@ public class BusinessHealthController {
     	
     	return businessHealthFeignService.insertmerchant(map);
     }
-    
-    
-    @RequestMapping(value = "/commoditydetailbyid", method = RequestMethod.GET)
-    Map<String,Object> getCommodityDetailbyid(@RequestParam Integer id){
-		return businessHealthFeignService.getCommodityDetailbyid(id);
-    	
-    }
+
    
 }

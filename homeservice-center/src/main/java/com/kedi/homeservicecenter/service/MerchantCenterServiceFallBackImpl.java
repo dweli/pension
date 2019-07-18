@@ -15,6 +15,7 @@ import java.util.Map;
 @Component
 public class MerchantCenterServiceFallBackImpl implements  MerchantCenterFeignService{
 
+
 	@Override
 	public List<Map> selectclassname(String name) {
 		// TODO Auto-generated method stub
@@ -30,7 +31,6 @@ public class MerchantCenterServiceFallBackImpl implements  MerchantCenterFeignSe
 	@Override
 	public boolean insertmerchant(Map map) {
 		// TODO Auto-generated method stub
-		return false;
+		return true;
 	}
-	
 }

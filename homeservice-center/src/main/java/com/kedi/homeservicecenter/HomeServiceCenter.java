@@ -11,8 +11,8 @@ import org.springframework.context.annotation.ComponentScan;
  * Hello world!
  *
  */
-@EnableFeignClients(basePackages = "com.kedi.homeservicecenter")
-@ComponentScan("com.kedi.homeservicecenter")
+@EnableFeignClients(basePackages = "com.kedi")
+@ComponentScan("com.kedi")
 @EnableEurekaClient
 @SpringBootApplication
 public class HomeServiceCenter 

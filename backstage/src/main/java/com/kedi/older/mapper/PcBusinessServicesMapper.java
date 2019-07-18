@@ -1,4 +1,4 @@
-package com.kedi.mokuai.dao;
+package com.kedi.older.mapper;
 
 import java.util.List;
 import java.util.Map;
@@ -17,7 +17,25 @@ import org.apache.ibatis.annotations.Update;
  * @date: 		2019/7/13 12:10
  */
 @Mapper
-public interface OldManMapper {
+public interface PcBusinessServicesMapper {
+	
+	/**
+	 * @Description: 根据商家id进行点赞
+	 * @param 		 businessid
+	 * @return		
+	 */
+    @Update("UPDATE business SET like_num=like_num+1 "  
+    		+"WHERE business_id=(#{businessid})")
+    int updatelikenum(@Param("businessid") int businessid);
+    
+    /**
+     * @Description: 根据商家id进行收藏
+     * @param 		 businessid
+     * @return		  
+     */
+    @Update("UPDATE business SET collect_num=collect_num+1 \r\n" + 
+    		"WHERE business_id=(#{businessid})")
+    int updatecollectnum(@Param("businessid") int businessid);
 	
 	/**
 	 * @Description:	获取商家信息表的所有数据

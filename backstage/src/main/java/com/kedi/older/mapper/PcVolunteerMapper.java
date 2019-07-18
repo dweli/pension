@@ -17,7 +17,7 @@ import org.apache.ibatis.annotations.Update;
  * @date: 		2019/7/13 12:10
  */
 @Mapper
-public interface VolunteerMapper {
+public interface PcVolunteerMapper {
 	
 	/**
 	 * @Description:	获取志愿者相关信息

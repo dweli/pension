@@ -10,8 +10,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.kedi.older.servie.BusinessServicesService;
-import com.kedi.older.servie.OldManService;
+import com.kedi.older.servie.PcBusinessServicesService;
+import com.kedi.older.servie.PcOldManService;
 
 
 
@@ -24,27 +24,27 @@ import com.kedi.older.servie.OldManService;
  * @date: 		2019/7/13 12:07
  */
 @Controller
-public class OldmanController {
+public class PcOldmanController {
 	
 	 @Autowired
-	    public OldManService service;
+	    public PcOldManService service;
 	 /**
-	  * @Description: 获取前台提交的参数，指定映射方法名为/selectoldpart
+	  * @Description: 获取前台提交的参数，指定映射方法名为/selectoldmanpart
 	  * @return		    返回一个数据对象	
 	  */
-	 @RequestMapping("/selectoldpart")
+	 @RequestMapping("/selectoldmanpart")
 	    @ResponseBody
-	    public List<Map<String, Object>> selectoldpart() {
+	    public List<Map<String, Object>> selectoldmanpart() {
 	    	List<Map<String,Object>> userid = service.oldpart();
 			return userid;	  
 	    }
 	 /**
-	  * @Description: 获取前台提交的参数，指定映射方法名为/selectoldall
+	  * @Description: 获取前台提交的参数，指定映射方法名为/selectoldmanall
 	  * @return		    返回一个数据对象	
 	  */
-	 @RequestMapping("/selectoldall")
+	 @RequestMapping("/selectoldmanall")
 	 @ResponseBody
-	 public List<Map<String, Object>> selectoldall(int elderlyid) {
+	 public List<Map<String, Object>> selectoldmanall(int elderlyid) {
 		 List<Map<String,Object>> userid = service.oldall(elderlyid);
 		 return userid;	  
 	 }

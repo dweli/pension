@@ -7,20 +7,20 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.kedi.older.mapper.VolunteerMapper;
+import com.kedi.older.mapper.PcVolunteerMapper;
 
 /**
  * 
  *
- * @ClassName	VolunteerService
+ * @ClassName	PcVolunteerService
  * @author: 	陈辽逊
  * @date: 		2019/7/17 11:32
  */
 @Service
-public class VolunteerService {
+public class PcVolunteerService {
 	
 	@Autowired
-	public VolunteerMapper mapper;
+	public PcVolunteerMapper mapper;
 	
 	 /**
 	  * @return	返回一个数据对象
@@ -53,7 +53,7 @@ public class VolunteerService {
 	  * @return		   返回一个数据对象
 	  */
 	 @Transactional
-	 public boolean VolunteerPictures(Map map) {
+	 public boolean volunteerpictures(Map map) {
 		 int a = mapper.imagesource(map);
 		 int b = mapper.volunteerapplicant(map);		 
 		 if (a==1&&b==1) {
@@ -67,7 +67,7 @@ public class VolunteerService {
 	  * @return		   返回一个数据对象
 	  */
 	 @Transactional
-	 public boolean iVolunteerPictures(Map map) {
+	 public boolean ivolunteerpictures(Map map) {
 		 int a = mapper.iimagesource(map);
 		 int b = mapper.ivolunteerapplicant(map);		 
 		 if (a==1&&b==1) {

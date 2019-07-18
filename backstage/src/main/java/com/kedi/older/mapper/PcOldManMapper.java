@@ -17,7 +17,7 @@ import org.apache.ibatis.annotations.Update;
  * @date: 		2019/7/13 12:10
  */
 @Mapper
-public interface OldManMapper {
+public interface PcOldManMapper {
 	
 	/**
 	 * @Description:	根据获取老人相关信息
@@ -28,7 +28,7 @@ public interface OldManMapper {
 			+"FROM elderly e "  
 			+"LEFT JOIN village v "  
 			+"ON e.village_id = v.village_id ")
-	List<Map<String, Object>> oldpart();
+	List<Map<String, Object>> oldmanpart();
 	/**
 	 * @Description:	根据老人id获取老人所有信息(详情页)
 	 * @param 			elderlyid
@@ -58,7 +58,7 @@ public interface OldManMapper {
 			+"LEFT JOIN selfcare s "  
 			+"ON e.selfcare_id = s.selfcare_id "  
 			+"WHERE elderly_id = (#{elderlyid})")
-	List<Map<String, Object>> oldall(@Param("elderlyid")int elderlyid);
+	List<Map<String, Object>> oldmanall(@Param("elderlyid")int elderlyid);
 
 	/**
 	 * @Description: 根据老人id修改老人表信息

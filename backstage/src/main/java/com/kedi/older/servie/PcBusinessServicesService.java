@@ -9,7 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.kedi.older.mapper.BusinessServicesMapper;
+import com.kedi.older.mapper.PcBusinessServicesMapper;
 
 
 
@@ -21,11 +21,23 @@ import com.kedi.older.mapper.BusinessServicesMapper;
  * @date: 		2019/7/13 12:13
  */
 @Service
-public class BusinessServicesService {
+public class PcBusinessServicesService {
 
 	 @Autowired
-	    public BusinessServicesMapper mapper;
+	    public PcBusinessServicesMapper mapper;
 
+	 /**
+	  * @return	返回一个数据对象
+	  */
+	 public int updatelikenum(int businessid) {
+		 return mapper.updatelikenum(businessid);
+	 }	    
+	 /**
+	  * @return	返回一个数据对象
+	  */
+	 public int updatecollectnum(int businessid) {
+		 return mapper.updatecollectnum(businessid);
+	 }	    
 	 /**
 	  * @return	返回一个数据对象
 	  */

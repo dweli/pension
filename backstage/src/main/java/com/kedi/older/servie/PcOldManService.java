@@ -6,25 +6,25 @@ import java.util.Map;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.kedi.older.mapper.OldManMapper;
+import com.kedi.older.mapper.PcOldManMapper;
 
 @Service
-public class OldManService {
+public class PcOldManService {
 	
 	@Autowired
-	public OldManMapper mapper;
+	public PcOldManMapper mapper;
 	
 	 /**
 	  * @return	返回一个数据对象
 	  */
 	 public List<Map<String,Object>>oldpart() {
-	    	return mapper.oldpart();
+	    	return mapper.oldmanpart();
 	    }	
 	 /**
 	  * @return	返回一个数据对象
 	  */
 	 public List<Map<String,Object>>oldall(int elderlyid) {
-		 return mapper.oldall(elderlyid);
+		 return mapper.oldmanall(elderlyid);
 	 }	
 	 /**
 	  * @return	返回一个数据对象
