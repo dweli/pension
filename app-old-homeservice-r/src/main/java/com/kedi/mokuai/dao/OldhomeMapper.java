@@ -23,7 +23,7 @@ public interface OldhomeMapper {
 	@Select("SELECT b.*,c.commodity_id,c.commodityclass_id,c.`name`,"
 			+ "DATE_FORMAT(c.uploadtime, '%Y-%m-%d') as uploadtime,c.price,c.minprice,c.maxprice,c.`status`,"
 			+ "DATE_FORMAT(c.sailtime, '%Y-%m-%d') as sailtime,c.describle from business b "
-			+ "LEFT JOIN commodity c "
-			+ "ON b.business_id=c.business_id")
+			+ "right JOIN commodity c "
+			+ "ON b.business_id=c.business_id LEFT JOIN businessclass s ON  s.`businessclass_id`=b.`businessclass_id` WHERE s.`busi_class` =1")
 	List<Map<String, Object>> commodity();
 }

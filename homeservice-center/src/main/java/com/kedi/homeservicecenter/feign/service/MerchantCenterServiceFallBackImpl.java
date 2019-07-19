@@ -1,4 +1,4 @@
-package com.kedi.homeservicecenter.service;
+package com.kedi.homeservicecenter.feign.service;
 
 import org.springframework.stereotype.Component;
 
@@ -15,7 +15,6 @@ import java.util.Map;
 @Component
 public class MerchantCenterServiceFallBackImpl implements  MerchantCenterFeignService{
 
-
 	@Override
 	public List<Map> selectclassname(String name) {
 		// TODO Auto-generated method stub
@@ -31,6 +30,7 @@ public class MerchantCenterServiceFallBackImpl implements  MerchantCenterFeignSe
 	@Override
 	public boolean insertmerchant(Map map) {
 		// TODO Auto-generated method stub
-		return true;
+		return false;
 	}
+	
 }

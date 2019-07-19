@@ -6,6 +6,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+
+
+
+
+
+
+
 import com.kedi.welfarecenter.service.HuilaoActiveService;
 
 import java.util.List;
@@ -24,7 +31,7 @@ public class HuilaoActiveController {
 	   
 
 	    @RequestMapping(value = "/huilaoactive/list")
-	    public List<Map> getHuilaoActiveList() {
+	    public List<Map<String,Object>> getHuilaoActiveList() {
 	    	
 	        return huilaoActiveController.getHuilaoActiveList();
 	    }

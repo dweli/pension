@@ -14,10 +14,10 @@ import java.util.List;
 import java.util.Map;
 
 /**
-* @Description:    比南山业务层接口
+* @Description:    姣斿崡灞变笟鍔″眰鎺ュ彛
 * @Author:         ytw
 * @CreateDate:     2019/7/12 9:37
-* @UpdateRemark:   修改内容
+* @UpdateRemark:   淇敼鍐呭
 * @Version:        1.0
 */
 @RestController
@@ -30,8 +30,8 @@ public class BilanshanController {
     private BilanshanProCommentService bilanshanProCommentService;
 
     /**
-    * 方法实现说明
-    * @author      查询商品评论
+    * 鏂规硶瀹炵幇璇存槑
+    * @author      鏌ヨ鍟嗗搧璇勮
     *@param
     * @return
     * @exception
@@ -47,7 +47,7 @@ public class BilanshanController {
 
 
     /**
-    * 方法实现说明  查询所有商品
+    * 鏂规硶瀹炵幇璇存槑  鏌ヨ鎵�鏈夊晢鍝�
     * @author      ytw
     *@param
     * @return
@@ -62,7 +62,7 @@ public class BilanshanController {
     }
 
     /**
-    * 方法实现说明   根据状态查询商品
+    * 鏂规硶瀹炵幇璇存槑   鏍规嵁鐘舵�佹煡璇㈠晢鍝�
     * @author      ytw
     *@param         num
     * @return      list
@@ -75,7 +75,7 @@ public class BilanshanController {
     }
 
     /**
-    * 方法实现说明  根据主键id查询商品详情
+    * 鏂规硶瀹炵幇璇存槑  鏍规嵁涓婚敭id鏌ヨ鍟嗗搧璇︽儏
     * @author      ytw
     *@param         id
     * @return
@@ -88,7 +88,7 @@ public class BilanshanController {
     }
 
     /**
-    * 方法实现说明   商品提交申请 插入数据库
+    * 鏂规硶瀹炵幇璇存槑   鍟嗗搧鎻愪氦鐢宠 鎻掑叆鏁版嵁搴�
     * @author      ytw
     *@param         puserid,name,price,weight,uploadUser,address
     * @return

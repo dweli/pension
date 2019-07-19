@@ -21,8 +21,8 @@ import java.util.Map;
 @FeignClient(value = "welfare-center", fallback = CivilWelfareServiceFallBackImpl.class)
 public interface CivilWelfareFeignService {
     
-    @RequestMapping(value = "/welfare/list", method = RequestMethod.GET)
-    public List<Map> getCivilWelfareList();
+    @RequestMapping(value = "/civil/list", method = RequestMethod.GET)
+    public List<Map<String,Object>> getCivilWelfareList();
     
     @RequestMapping(value = "/welfare/listone", method = RequestMethod.GET)
     public Map getCivilWelfareDetail(@RequestParam("id") Integer id);
