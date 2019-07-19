@@ -18,14 +18,16 @@ import java.util.Map;
 @Component
 public class CivilWelfareServiceFallBackImpl implements  CivilWelfareFeignService{
 
+	
+
 	@Override
-	public List<Map> getCivilWelfareList() {
+	public Map getCivilWelfareDetail(Integer id) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public Map getCivilWelfareDetail(Integer id) {
+	public List<Map<String, Object>> getCivilWelfareList() {
 		// TODO Auto-generated method stub
 		return null;
 	}

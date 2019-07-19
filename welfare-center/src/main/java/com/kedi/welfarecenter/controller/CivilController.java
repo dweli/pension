@@ -7,7 +7,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.kedi.welfarecenter.feign.service.CivilWelfareService;
+
+
+
+
+
+import com.kedi.welfarecenter.service.CivilWelfareService;
 
 import java.util.List;
 import java.util.Map;
@@ -25,7 +30,7 @@ public class CivilController {
 	   
 
 	    @RequestMapping(value = "/civil/list")
-	    public List<Map> getJobVolunteerList() {
+	    public List<Map<String,Object>> getJobVolunteerList() {
 	    	
 	        return civilWelfareService.getCivilWelfareList();
 	    }

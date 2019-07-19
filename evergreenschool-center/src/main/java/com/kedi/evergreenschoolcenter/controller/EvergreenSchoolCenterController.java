@@ -5,7 +5,16 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.kedi.evergreenschoolcenter.service.EvergreenSchoolCenterService;
+
+
+
+
+
+
+import com.kedi.evergreenschoolcenter.feign.service.EvergreenSchoolCenterService;
+import com.kedi.evergreenschoolcenter.service.CommunitysalonService;
+import com.kedi.evergreenschoolcenter.service.CourseRegClassService;
+import com.kedi.evergreenschoolcenter.service.OnlineclassService;
 
 import java.util.List;
 import java.util.Map;
@@ -18,46 +27,36 @@ import java.util.Map;
  */
 @RestController
 public class EvergreenSchoolCenterController {
+    
     @Autowired
-    private EvergreenSchoolCenterService evergreenSchoolCenterService;
+    CommunitysalonService communitysalonService;
+    @Autowired
+    CourseRegClassService courseRegClassService;
+    @Autowired
+    OnlineclassService onlineclassService;
    
-    /**
-     * @Description:获取在线课堂的所有状态
-     * @return
-     */
-    @RequestMapping(value = "/getselectcalss")
-    public List<Map> getselectcalss() {
-    	
-    	return evergreenSchoolCenterService.selectcalss();
+    @RequestMapping("/selectcommunitysalon")
+    public List<Map<String, Object>> selectcommunitysalon() {
+    	List<Map<String,Object>> users = communitysalonService.communitysalon();
+        return users;
     }
-    /**
-     * @Description:获取在线课堂的所有信息表
-     * @param 		calss
-     * @return
-     */
-    @RequestMapping(value = "/getselectonline")
-    public List<Map> getselectonline(int calss) {
-    	
-        return evergreenSchoolCenterService.selectonline(calss);
+    
+    @RequestMapping("/selectcoursereg")
+    public List<Map<String, Object>> selectcoursereg() {
+    	List<Map<String,Object>> users = courseRegClassService.coursereg();
+        return users;
     }
-    /**
-     * @Description:获取社区沙龙的所有信息
-     * @return
-     */
-    @RequestMapping(value = "/getselectcommunitysalon")
-    public List<Map> getselectcommunitysalon() {
-    	
-    	return evergreenSchoolCenterService.selectcommunitysalon();
+    
+    @RequestMapping("/selectcalss")
+    public List<Map<String, Object>> selectcalss() {
+    	List<Map<String,Object>> users = onlineclassService.calss();
+        return users;
     }
-    /**
-     * @Description:获取课程报名的所有信息表
-     * @return
-     */
-    @RequestMapping(value = "/getselectcoursereg")
-    public List<Map> getselectcoursereg() {
-    	
-    	return evergreenSchoolCenterService.selectcoursereg();
+    
+    @RequestMapping("/selectonline")
+    public List<Map<String, Object>> selectonline(int cal) {
+    	List<Map<String,Object>> users = onlineclassService.online(cal);
+    	return users;
     }
-
    
 }

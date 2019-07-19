@@ -22,10 +22,10 @@ import java.util.Map;
 @RestController
 public class CivilWelfareController {
     @Autowired
-    private CivilWelfareFeignService civilWelfareFeignService;
+    CivilWelfareFeignService civilWelfareFeignService;
     
-    @RequestMapping(value = "/welfare/list")
-    public List<Map> getCivilWelfareList() {
+    @RequestMapping(value = "/civil/list")
+    public List<Map<String,Object>> getCivilWelfareList() {
         return civilWelfareFeignService.getCivilWelfareList();
     }
     

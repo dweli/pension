@@ -4,7 +4,17 @@ server:
 spring:
   application:
     name: welfare-center
-
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://39.104.97.83:3306/Pension?useUnicode=true&characterEncoding=utf8
+    username: kedi
+    password: kedi123
+    dbcp2:
+      min-idle: 5
+      initial-size: 5
+      max-total: 5
+      max-wait-millis: 150
+      
 eureka:
   client:
     registerWithEureka: true

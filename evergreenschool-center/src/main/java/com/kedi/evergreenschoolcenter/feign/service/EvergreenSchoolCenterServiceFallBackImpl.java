@@ -1,4 +1,4 @@
-package com.kedi.evergreenschoolcenter.service;
+package com.kedi.evergreenschoolcenter.feign.service;
 
 import org.springframework.stereotype.Component;
 

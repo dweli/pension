@@ -9,7 +9,11 @@ import org.springframework.web.bind.annotation.RestController;
 
 
 
-import com.kedi.welfarecenter.feign.service.HuilaoActiveService;
+
+
+
+
+import com.kedi.welfarecenter.service.HuilaoActiveService;
 
 import java.util.List;
 import java.util.Map;
@@ -27,7 +31,7 @@ public class HuilaoActiveController {
 	   
 
 	    @RequestMapping(value = "/huilaoactive/list")
-	    public List<Map> getHuilaoActiveList() {
+	    public List<Map<String,Object>> getHuilaoActiveList() {
 	    	
 	        return huilaoActiveController.getHuilaoActiveList();
 	    }

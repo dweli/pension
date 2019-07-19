@@ -1,4 +1,4 @@
-package com.kedi.mokuai.dao;
+package com.kedi.homeservicecenter.read.dao.mapper;
 
 import java.util.List;
 import java.util.Map;
@@ -26,7 +26,7 @@ public interface OldhomeMapper {
 			+ "DATE_FORMAT(c.sailtime, '%Y-%m-%d') as sailtime,c.describle from business b "
 			+ "right JOIN commodity c "
 			+ "ON b.business_id=c.business_id LEFT JOIN businessclass s ON  s.`businessclass_id`=b.`businessclass_id` WHERE s.`busi_class` =1")
-	List<Map<String, Object>> commodity();
+	List<Map> commodity();
 	
 	/**
 	 * @Description:	根据商品id 返回详情

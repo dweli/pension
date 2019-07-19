@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.kedi.homeservicecenter.service.HomeServiceCenterFeignService;
+import com.kedi.homeservicecenter.service.HomeServiceCenterService;
 
 import java.util.List;
 import java.util.Map;
@@ -21,7 +21,7 @@ import java.util.Map;
 @RestController
 public class HomeServiceCenterController {
     @Autowired
-    private HomeServiceCenterFeignService homeServiceCenterFeignService;
+    private HomeServiceCenterService homeServiceCenterFeignService;
    
 
     @RequestMapping(value = "/getbusinesscommodity",method = RequestMethod.GET)

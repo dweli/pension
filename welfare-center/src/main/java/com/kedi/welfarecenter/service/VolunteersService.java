@@ -1,7 +1,7 @@
-package com.kedi.welfarecenter.feign.service;
+package com.kedi.welfarecenter.service;
 
 
-import org.springframework.cloud.openfeign.FeignClient;
+
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -16,7 +16,7 @@ import java.util.Map;
  * @Date 2019/7/1  17:02
  * Version 1.0
  **/
-@FeignClient(value = "app-older-volunteer-r", fallback = VolunteerServiceFallBackImpl.class)
+
 public interface VolunteersService {
 	
    /**

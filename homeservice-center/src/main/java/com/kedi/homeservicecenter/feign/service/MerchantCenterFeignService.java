@@ -1,4 +1,4 @@
-package com.kedi.homeservicecenter.service;
+package com.kedi.homeservicecenter.feign.service;
 
 
 import org.springframework.cloud.openfeign.FeignClient;

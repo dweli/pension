@@ -49,10 +49,60 @@ zuul:
     provider-order6:
       path: /bilanshan/**
       serviceId: bilanshan
-      stripPrefix: false
+      stripPrefix: true
     provider-order7:
       path: /news/**
       serviceId: importantnews
-      stripPrefix: flase
+      stripPrefix: true
+    provider-order8:
+      path: /backstage/**
+      serviceId: backstage
+      stripPrefix: true
+    provider-order9:
+      path: /welfare-center/**
+      serviceId: welfare-center
+      stripPrefix: true
+    provider-ordera:
+      path: /productcomment-center/**
+      serviceId: productcomment-center
+      stripPrefix: true
+    provider-orderb:
+      path: /product-center/**
+      serviceId: product-center
+      stripPrefix: true
+    provider-orderc:
+      path: /othersource-center/**
+      serviceId: othersource-center
+      stripPrefix: true
+    provider-orderd:
+      path: /news-center/**
+      serviceId: news-center
+      stripPrefix: true
+    provider-ordere:
+      path: /mycolectionr-center/**
+      serviceId: mycolectionr-center
+      stripPrefix: true
+    provider-orderf:
+      path: /homeservice-center/**
+      serviceId: homeservice-center
+      stripPrefix: true
+    provider-orderg:
+      path: /health-center/**
+      serviceId: health-center
+      stripPrefix: true
+    provider-orderh:
+      path: /goldenradio-center/**
+      serviceId: goldenradio-center
+      stripPrefix: true
+    provider-orderai:
+      path: /evergreenschool-center/**
+      serviceId: evergreenschool-center
+      stripPrefix: true
+    provider-orderaj:
+      path: /Journalism-center/**
+      serviceId: Journalism-center
+      stripPrefix: true
+    
+   
 
 
