@@ -1,4 +1,4 @@
-package com.kedi.welfarecenter.service;
+package com.kedi.welfarecenter.feign.service;
 
 import org.springframework.stereotype.Component;
 
@@ -15,21 +15,19 @@ import java.util.Map;
  * Version 1.0
  **/
 @Component
-public class CivilWelfareServiceFallBackImpl implements  CivilWelfareService{
+public class HuilaoActiveServiceFallBackImpl implements  HuilaoActiveService{
 
 	@Override
-	public List<Map> getCivilWelfareList() {
+	public List<Map> getHuilaoActiveList() {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public Map getCivilWelfareDetail(Integer id) {
+	public Map getHuilaoActiveDetail(Integer id) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
-
-	
 
 }

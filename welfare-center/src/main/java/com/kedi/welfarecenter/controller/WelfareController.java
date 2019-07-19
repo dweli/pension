@@ -1,11 +1,13 @@
 package com.kedi.welfarecenter.controller;
 
 
-import com.kedi.welfarecenter.service.WelfareService;
+
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import com.kedi.welfarecenter.feign.service.WelfareService;
 
 import java.util.List;
 import java.util.Map;

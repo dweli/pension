@@ -1,4 +1,4 @@
-package com.kedi.welfarecenter.service;
+package com.kedi.welfarecenter.feign.service;
 
 import org.springframework.stereotype.Component;
 
