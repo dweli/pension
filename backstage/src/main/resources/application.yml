@@ -5,6 +5,10 @@ server:
 spring:
   application:
     name: backstage
+  http:
+    multipart:
+      maxFileSize: 100Mb
+      maxRequestSize: 1000Mb
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
     url: jdbc:mysql://39.104.97.83:3306/Pension?useUnicode=true&characterEncoding=utf8
@@ -28,6 +32,7 @@ eureka:
   instance:
     instanceId: ${spring.application.name}:${server.port}-hystrix
     prefer-ip-address: true
+
 
 
 

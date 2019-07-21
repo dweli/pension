@@ -99,8 +99,8 @@ zuul:
       serviceId: evergreenschool-center
       stripPrefix: true
     provider-orderaj:
-      path: /Journalism-center/**
-      serviceId: Journalism-center
+      path: /journalism-center/**
+      serviceId: journalism-center
       stripPrefix: true
     
    
