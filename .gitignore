@@ -26,6 +26,8 @@ hs_err_pid*
 .classpath
 .project
 target
+*.gitignore
 *.springBeans
+
 
 
