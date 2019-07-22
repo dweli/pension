@@ -59,7 +59,7 @@ public class PcBusinessServicesService {
 	  * @Description Inster
 	  * @return	返回一个数据对象
 	  */
-	 @Transactional
+	 @Transactional(rollbackFor=Exception.class)
 	 public boolean merchant(Map map) {
 		int a= mapper.state(map);
 		 int b=mapper.merchant(map);

@@ -29,8 +29,7 @@ public class OlderLifeController {
 
     @RequestMapping(value = "/selectUser")
     public List<Map<String, Object>> selectUser(String name) throws Throwable, IOException {
-        System.out.println("进入了方法");
-        List<Map<String, Object>> users = oldLifeService.findByName();
+        List<Map<String, Object>> users = oldLifeService.findBedList();
         for (Map<String, Object> map : users) {
             for (Map.Entry<String, Object> m : map.entrySet()) {
                 if ("Introduction".equals(m.getKey())) {
@@ -45,7 +44,7 @@ public class OlderLifeController {
         /**
         * 方法实现说明  点赞+1
         * @author      ytw
-        *@param
+        * @param
         * @return
         * @exception
         * @date        2019/7/12 9:48

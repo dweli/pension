@@ -40,7 +40,7 @@ public class PcHuiLaoactiveService {
 	  * @Description: 修改相关慧老活动对应的慧老图片资源信息
 	  * @return		   返回一个数据对象
 	  */
-	 @Transactional
+	 @Transactional(rollbackFor=Exception.class)
 	 public boolean huilaoactive(Map map) {
 		 int a = mapper.huilaoactive(map);
 		 int b = mapper.huilaoimage(map);		 
@@ -54,7 +54,7 @@ public class PcHuiLaoactiveService {
 	  * @Description: 创建相关慧老活动对应的慧老图片资源信息
 	  * @return		   返回一个数据对象
 	  */
-	 @Transactional
+	 @Transactional(rollbackFor=Exception.class)
 	 public boolean ihuilaoactive(Map map) {
 		 int a = mapper.ihuilaoactive(map);
 		 int b = mapper.ihuilaoimage(map);		 

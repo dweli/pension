@@ -52,7 +52,7 @@ public class PcVolunteerService {
 	  * @Description: 修改志愿者报名人和图片资源信息
 	  * @return		   返回一个数据对象
 	  */
-	 @Transactional
+	 @Transactional(rollbackFor=Exception.class)
 	 public boolean volunteerpictures(Map map) {
 		 int a = mapper.imagesource(map);
 		 int b = mapper.volunteerapplicant(map);		 
@@ -66,7 +66,7 @@ public class PcVolunteerService {
 	  * @Description: 创建志愿者报名人和图片资源信息
 	  * @return		   返回一个数据对象
 	  */
-	 @Transactional
+	 @Transactional(rollbackFor=Exception.class)
 	 public boolean ivolunteerpictures(Map map) {
 		 int a = mapper.iimagesource(map);
 		 int b = mapper.ivolunteerapplicant(map);		 

@@ -16,13 +16,22 @@ import java.util.Map;
 */
 @Mapper
 public interface OldLifeMapper {
+	/**
+	 * 返回床位信息
+	 */
     @Select("SELECT * FROM `bed_oldlife` order by oldlife_id")
-    List<Map<String, Object>> findByName();
-
+    List<Map<String, Object>> findBedList();
+    
+    /**
+	 * 对养老院的点赞数添加
+	 */
     @Update("UPDATE oldlife SET praise_points=praise_points+1  " +
             " WHERE oldlife_id=#{id}")
     int updatePraise(@Param("id") Integer id);
-
+    
+    /**
+	 * 对养老院的收藏数添加
+	 */
     @Update("UPDATE oldlife SET collection_num=collection_num+1  " +
             " WHERE oldlife_id=#{id}")
     int updateCollection(@Param("id") Integer id);

@@ -9,16 +9,24 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Map;
-
+/**
+ * 
+* @Description: 
+* @author: dw 
+* @date: 2019 2019年7月22日 下午1:25:02
+ */
 @Service
 public class OldLifeServiceImpl implements OldLifeService {
     @Autowired
     private OldLifeMapper oldLifeMapper;
-
+   
+    /**
+	 * 返回床位信息
+	 */
     @Override
-    public List<Map<String, Object>> findByName() {
+    public List<Map<String, Object>> findBedList() {
 
-        return oldLifeMapper.findByName();
+        return oldLifeMapper.findBedList();
     }
 
 

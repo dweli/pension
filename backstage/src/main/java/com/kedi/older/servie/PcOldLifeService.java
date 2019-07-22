@@ -39,7 +39,7 @@ public class PcOldLifeService {
 	  * @Description: 修改相关床位养老院的信息
 	  * @return		   返回一个数据对象
 	  */
-	 @Transactional
+	 @Transactional(rollbackFor=Exception.class)
 	 public boolean bedoldlife(Map map) {
 		 int a = mapper.oldlife(map);
 		 int b = mapper.bed(map);		 
@@ -53,7 +53,7 @@ public class PcOldLifeService {
 	  * @Description: 创建相关床位养老院的信息
 	  * @return		   返回一个数据对象
 	  */
-	 @Transactional
+	 @Transactional(rollbackFor=Exception.class)
 	 public boolean ibedoldlife(Map map) {
 		 int a = mapper.ioldlife(map);
 		 int b = mapper.ibed(map);		 

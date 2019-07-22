@@ -10,6 +10,13 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.context.annotation.Bean;
 import org.springframework.scheduling.annotation.EnableScheduling;
 
+
+/**
+ * 
+* @Description: 
+* @author: dw 
+* @date: 2019 2019年7月22日 下午1:22:13
+ */
 @EnableScheduling
 @EnableEurekaClient
 @SpringBootApplication
@@ -18,15 +25,13 @@ public class OldApplication {
         SpringApplication.run(OldApplication.class,args);
     }
     /**
-     * 文件上传配置
+     * 上传文件配置
      * @return
      */
 @Bean
 public MultipartConfigElement multipartConfigElement() {
     MultipartConfigFactory factory = new MultipartConfigFactory();
-    //文件最大
     factory.setMaxFileSize("100MB"); //KB,MB
-    /// 设置总上传数据总大小
     factory.setMaxRequestSize("100MB");
     return factory.createMultipartConfig();
 }

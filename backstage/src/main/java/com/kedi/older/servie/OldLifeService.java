@@ -14,7 +14,10 @@ import java.util.Map;
 * @Version:        1.0
 */
 public interface OldLifeService {
-    List<Map<String,Object>> findByName();
+	/**
+	 * 
+	 */
+    List<Map<String,Object>> findBedList();
     int updatePraise(@Param("id") Integer id);
     int updateCollection(@Param("id") Integer id);
 }
