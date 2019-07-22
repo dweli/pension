@@ -8,7 +8,11 @@ import org.springframework.context.annotation.ComponentScan;
 
 
 /**
- * Hello world!
+ * 
+ *
+ * @ClassName	HomeServiceCenter
+ * @author: 	陈辽逊
+ * @date: 		2019/7/20
  *
  */
 @EnableFeignClients(basePackages = "com.kedi")

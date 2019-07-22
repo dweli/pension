@@ -34,8 +34,7 @@ public class PcHuiLaoactiveController {
 	 @RequestMapping("/selecthuilaoactivepart")
 	    @ResponseBody
 	    public List<Map<String, Object>> selecthuilaoactivepart() {
-	    	List<Map<String,Object>> userid = service.huilaoactivepart();
-			return userid;	  
+		 return service.huilaoactivepart();
 	    }
 	 /**
 	  * @Description: 获取前台提交的参数，指定映射方法名为/selecthuilaoactiveall
@@ -44,8 +43,7 @@ public class PcHuiLaoactiveController {
 	 @RequestMapping("/selecthuilaoactiveall")
 	 @ResponseBody
 	 public List<Map<String, Object>> selecthuilaoactiveall(int activeid) {
-		 List<Map<String,Object>> userid = service.huilaoactiveall(activeid);
-		 return userid;	  
+		 return service.huilaoactiveall(activeid);
 	 }
 	 
 
@@ -53,13 +51,11 @@ public class PcHuiLaoactiveController {
 	 @RequestMapping(value = "/inserthuilaoactive",method=RequestMethod.POST)
 	 @ResponseBody
 	 public boolean inserthuilaoactive(@RequestParam Map map) {
-		 boolean userid = service.ihuilaoactive(map);
-		 return userid;	    
+		 return service.ihuilaoactive(map);
 	 }
 	 @RequestMapping(value = "/updateihuilaoactive",method=RequestMethod.POST)
 	 @ResponseBody
 	 public boolean updateihuilaoactive(@RequestParam Map map) {
-		 boolean userid = service.huilaoactive(map);
-		 return userid;	    
+		 return service.huilaoactive(map);
 	 }
 }

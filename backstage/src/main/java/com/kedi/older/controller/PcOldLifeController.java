@@ -34,8 +34,7 @@ public class PcOldLifeController {
 	 @RequestMapping("/selectoldlifepart")
 	    @ResponseBody
 	    public List<Map<String, Object>> selectoldlifepart() {
-	    	List<Map<String,Object>> userid = service.oldlifepart();
-			return userid;	  
+		 return service.oldlifepart();
 	    }
 	 /**
 	  * @Description: 获取前台提交的参数，指定映射方法名为/selectvolunteerall
@@ -44,8 +43,7 @@ public class PcOldLifeController {
 	 @RequestMapping("/selectoldlifeall")
 	 @ResponseBody
 	 public List<Map<String, Object>> selectoldlifeall(int oldlifeid) {
-		 List<Map<String,Object>> userid = service.oldlifeall(oldlifeid);
-		 return userid;	  
+		 return service.oldlifeall(oldlifeid);
 	 }
 	 
 
@@ -53,13 +51,11 @@ public class PcOldLifeController {
 	 @RequestMapping(value = "/insertibedoldlife",method=RequestMethod.POST)
 	 @ResponseBody
 	 public boolean insertibedoldlife(@RequestParam Map map) {
-		 boolean userid = service.ibedoldlife(map);
-		 return userid;	    
+		 return service.ibedoldlife(map);
 	 }
 	 @RequestMapping(value = "/updatebedoldlife",method=RequestMethod.POST)
 	 @ResponseBody
 	 public boolean updatebedoldlife(@RequestParam Map map) {
-		 boolean userid = service.bedoldlife(map);
-		 return userid;	    
+		 return service.bedoldlife(map);
 	 }
 }

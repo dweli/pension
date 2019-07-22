@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 
 
-import com.kedi.evergreenschoolcenter.feign.service.EvergreenSchoolCenterService;
 import com.kedi.evergreenschoolcenter.service.CommunitysalonService;
 import com.kedi.evergreenschoolcenter.service.CourseRegClassService;
 import com.kedi.evergreenschoolcenter.service.OnlineclassService;
@@ -43,20 +42,17 @@ public class EvergreenSchoolCenterController {
     
     @RequestMapping("/selectcoursereg")
     public List<Map<String, Object>> selectcoursereg() {
-    	List<Map<String,Object>> users = courseRegClassService.coursereg();
-        return users;
+    	return courseRegClassService.coursereg();
     }
     
     @RequestMapping("/selectcalss")
     public List<Map<String, Object>> selectcalss() {
-    	List<Map<String,Object>> users = onlineclassService.calss();
-        return users;
+    	return onlineclassService.calss();
     }
     
     @RequestMapping("/selectonline")
     public List<Map<String, Object>> selectonline(int cal) {
-    	List<Map<String,Object>> users = onlineclassService.online(cal);
-    	return users;
+    	return onlineclassService.online(cal);
     }
    
 }
