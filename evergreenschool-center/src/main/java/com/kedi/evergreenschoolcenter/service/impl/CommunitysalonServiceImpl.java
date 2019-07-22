@@ -22,10 +22,11 @@ public class CommunitysalonServiceImpl implements CommunitysalonService {
 
 	 @Autowired
 	    public CommunitysalonMapper mapper;
-
-	 /**
-	  * @return 返回一个数据对象communitysalon
-	  */
+	
+		 /**
+		  * @return 返回一个数据对象communitysalon
+		  */
+	    @Override
 	    public List<Map<String,Object>> communitysalon() {
 	        return mapper.communitysalon();
 	    }

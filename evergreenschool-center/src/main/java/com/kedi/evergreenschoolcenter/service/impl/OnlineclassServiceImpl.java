@@ -19,7 +19,7 @@ import com.kedi.evergreenschoolcenter.service.OnlineclassService;
  * @date: 		2019/7/13 10:42
  */
 @Service
-public class OnlineclassServiceimpl implements OnlineclassService{
+public class OnlineclassServiceImpl implements OnlineclassService{
 	
 	
 	 @Autowired
@@ -27,6 +27,7 @@ public class OnlineclassServiceimpl implements OnlineclassService{
 	 /**
 	  * @return	返回一个online数据对象
 	  */
+	    @Override
 	    public List<Map<String,Object>> online(int cal) {
 	        return mapper.online(cal);
 	    }
@@ -34,6 +35,7 @@ public class OnlineclassServiceimpl implements OnlineclassService{
 	 /**
 	  * @return 返回一个calss数据对象
 	  */
+	    @Override
 	    public List<Map<String,Object>> calss() {
 	        return mapper.calss();
 	    }

@@ -23,9 +23,10 @@ public class CourseRegClassServiceImpl implements CourseRegClassService {
 	 @Autowired
 	    public CourseRegMapper mapper;
 	 
-	 /**
-	  * @return 返回一个数据对象coursereg
-	  */
+		 /**
+		  * @return 返回一个数据对象coursereg
+		  */
+	    @Override
 	    public List<Map<String,Object>> coursereg() {
 	        return mapper.coursereg();
 	    }
