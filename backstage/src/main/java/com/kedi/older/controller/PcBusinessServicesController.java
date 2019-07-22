@@ -34,8 +34,7 @@ public class PcBusinessServicesController {
 	 @RequestMapping("/selectclassname")
 	    @ResponseBody
 	    public List<Map<String, Object>> selectclassname(String name) {
-	    	List<Map<String,Object>> userid = service.classname(name);
-			return userid;	  
+		 return service.classname(name);
 	    }
 	 /**
 	  * @Description:  点赞
@@ -44,8 +43,7 @@ public class PcBusinessServicesController {
 	 @RequestMapping(value = "/updatelikenum",method=RequestMethod.POST)
 	 @ResponseBody
 	 public int updatelikenum(@RequestParam int businessid) {
-		 int userid = service.updatelikenum(businessid);
-		 return userid;	  
+		 return service.updatelikenum(businessid);
 	 }
 	 /**
 	  * @Description: 我的收藏
@@ -54,19 +52,16 @@ public class PcBusinessServicesController {
 	 @RequestMapping(value = "/updatecollectnum",method=RequestMethod.POST)
 	 @ResponseBody
 	 public int updatecollectnum(@RequestParam int businessid) {
-		 int userid = service.updatecollectnum(businessid);
-		 return userid;	  
+		 return service.updatecollectnum(businessid);
 	 }
 	 @RequestMapping(value = "/updatebusiness",method=RequestMethod.POST)
 	 @ResponseBody
 	 public int updatebusiness(@RequestParam Map map) {
-		 int userid = service.business(map);
-		 return userid;	  
+		 return service.business(map);
 	 }
 	 @RequestMapping(value = "/insertmerchant",method=RequestMethod.POST)
 	 @ResponseBody
 	 public boolean insertmerchant(@RequestParam Map map) {
-		 boolean b = service.merchant(map);
-		 return b;	  
+		 return service.merchant(map);
 	 }
 }

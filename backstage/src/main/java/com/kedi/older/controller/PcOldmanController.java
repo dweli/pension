@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.kedi.older.servie.PcBusinessServicesService;
 import com.kedi.older.servie.PcOldManService;
 
 
@@ -35,8 +34,7 @@ public class PcOldmanController {
 	 @RequestMapping("/selectoldmanpart")
 	    @ResponseBody
 	    public List<Map<String, Object>> selectoldmanpart() {
-	    	List<Map<String,Object>> userid = service.oldpart();
-			return userid;	  
+		 return service.oldpart();
 	    }
 	 /**
 	  * @Description: 获取前台提交的参数，指定映射方法名为/selectoldmanall
@@ -45,21 +43,18 @@ public class PcOldmanController {
 	 @RequestMapping("/selectoldmanall")
 	 @ResponseBody
 	 public List<Map<String, Object>> selectoldmanall(int elderlyid) {
-		 List<Map<String,Object>> userid = service.oldall(elderlyid);
-		 return userid;	  
+		 return service.oldall(elderlyid);
 	 }
 	 
 	 @RequestMapping(value = "/updateelderly",method=RequestMethod.POST)
 	 @ResponseBody
 	 public int updateelderly(@RequestParam Map map) {
-		 int userid = service.elderly(map);
-		 return userid;	  
+		 return service.elderly(map);
 	 }
 	 
 	 @RequestMapping(value = "/insertielderly",method=RequestMethod.POST)
 	 @ResponseBody
 	 public int insertielderly(@RequestParam Map map) {
-		 int userid = service.ielderly(map);
-		 return userid;	    
+		 return service.ielderly(map);
 	 }
 }
