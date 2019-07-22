@@ -1,0 +1,27 @@
+server:
+  port: 2021
+spring:
+  application:
+    name: health-center
+  datasource:
+    primary:
+      driver-class-name: com.mysql.jdbc.Driver
+      jdbc-url: jdbc:mysql://39.104.97.83:3306/Pension?useUnicode=true&characterEncoding=utf8
+      username: kedi
+      password: kedi123	
+    secondary:
+      driver-class-name: com.mysql.jdbc.Driver
+      jdbc-url: jdbc:mysql://39.104.91.94:3306/pension?useUnicode=true&characterEncoding=utf8
+      username: pension
+      password: kedi123  
+eureka:
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      #defaultZone: http://172.24.132.96:8761/eureka/
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    instanceId: ${spring.application.name}:${server.port}
+    preferIpAddress: true
+
