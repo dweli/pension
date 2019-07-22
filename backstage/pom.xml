@@ -39,12 +39,7 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter</artifactId>
         </dependency>
-        <!-- 定时器依赖 -->
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <optional>true</optional>
-        </dependency>
+
         <!-- 添加 mybatis所需要的依赖 -->
         <dependency>
             <groupId>org.mybatis.spring.boot</groupId>

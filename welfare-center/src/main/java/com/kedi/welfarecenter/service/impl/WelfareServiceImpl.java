@@ -13,11 +13,12 @@ public class WelfareServiceImpl implements WelfareService {
 	@Autowired
 	JobMapper jobMapper;
 	
+	@Override
 	public List<Map> getJobList() {
 		return jobMapper.findList();
 	}
 
-	
+	@Override
 	public Map getJobDetail(Integer id) {
 		return jobMapper.findDetail(id);
 	}
