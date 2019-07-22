@@ -15,9 +15,23 @@ import java.util.Map;
 */
 public interface OldLifeService {
 	/**
-	 * 
+	 * @author dw
+	 * @Description:dffff
+	 * @Date 2019/7/12 9:50
+	 * @param id
+     * @return
 	 */
     List<Map<String,Object>> findBedList();
-    int updatePraise(@Param("id") Integer id);
-    int updateCollection(@Param("id") Integer id);
+    /**
+     * @Description:更改床位点赞数
+     * @param id
+     * @return
+     */
+    int updatePraise(Integer id); 
+    /**
+     * @Description:更改床位收藏数
+     * @param id
+     * @return
+     */
+    int updateCollection(Integer id);
 }
