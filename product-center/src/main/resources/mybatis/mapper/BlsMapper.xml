@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.kedi.productcenter.mapper.BlsMapper">
+
+
+    <insert id="insertopus" parameterType="Map" keyProperty="opus_id" keyColumn="opus_id" useGeneratedKeys="true" >
+   INSERT INTO opus(p_user_id,name,price,weight,uploadUser,status,uploadDate)
+   VALUES(#{puserid},${name},#{price},#{weight},#{uploadUser},1,CURTIME());
+    </insert>
+
+</mapper>
