@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.kedi.usercenter.mapper.UserMapper">
+
+    <update id="updateUserInfo"  parameterType="Map">
+   update user SET name=${name},sex=#{sex} where idcard=${idcard}
+    </update>
+
+    <update id="updateElderly"  parameterType="Map">
+ update elderly SET name=${name} where idcard=${idcard}
+</update>
+
+    <update id="updateCommunityc" parameterType="Map" >
+       update communityc SET communityc_name=${communityc_name} where communityc_id=#{communityc_id}
+    </update>
+
+    <update id="updatePassword" parameterType="String">
+        update user SET password=#{newPassword} where  idcard=${idcard}
+    </update>
+
+    <update id="updatePasswordByPhone" parameterType="String">
+        update user as a left join (select user_phone.p_user_id from user_phone left join phone on
+        phone.p_phone_id=user_phone.p_phone_id where phone.code=#{phone} )as b on a.p_user_id =b.p_user_id  set a.password=#{newPassword}
+    </update>
+
+    <insert id="insertUser" parameterType="Map" keyProperty="p_user_id" keyColumn="p_user_id" useGeneratedKeys="true" >
+   INSERT INTO user(loginname,password,idcard)values(#{loginname},#{password},#{idcard});
+    </insert>
+
+    <insert id="insertPhone" parameterType="Map" keyProperty="p_phone_id" keyColumn="p_phone_id" useGeneratedKeys="true" >
+    insert into phone (code)values (#{code});
+    </insert>
+
+    <insert id="insertPhoneUser" parameterType="Map" >
+        insert into  user_phone (p_user_id,p_phone_id) values(#{p_user_id},#{p_phone_id})
+    </insert>
+
+
+</mapper>
